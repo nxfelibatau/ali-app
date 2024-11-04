@@ -10,8 +10,13 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        navy: "var(--my-navy)",
+        grass: "var(--my-green)",
+        silk: "var(--my-silk)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin'),
+  ],
 };

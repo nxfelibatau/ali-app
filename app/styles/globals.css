@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --my-navy: #222d52;
+  --my-green: #8decb4;
+  --my-silk: #e3efd3;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay-100 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-delay-300 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1s;
+}
+/* Carousel container styling */
+.scrolling-logo-outer-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Inner container styling */
+.scrolling-logo-container {
+  display: flex;
+  animation: scroll 60s linear infinite;
+}
+
+/* Logo item styling */
+.scrolling-logo-wrapper {
+  display: inline-block;
+  padding: 0 100px; /* Adjust spacing between logos */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
