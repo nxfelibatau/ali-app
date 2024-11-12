@@ -56,6 +56,39 @@ export default function Home() {
         <ProjectGrid />
         <ProjectGrid />
       </section>
+      <div className="flex flex-col items-center justify-center mt-2 xl:mt-0 space-y-10">
+        {/* Heading Section */}
+        <div className="flex flex-col items-center text-center lg:text-left mt-6 md:mt-10 fade-in">
+          <p className="text-silk text-4xl md:text-5xl flex gap-2">
+            From insight to<span> action</span>
+          </p>
+        </div>
+
+        {/* Paragraph Section */}
+        <div className="flex flex-col items-center text-center space-y-4 px-4 lg:px-0 fade-in fade-in-delay-100 max-w-2xl">
+          <p className="text-silk text-sm md:text-base xl:text-xl">
+            this is where data’s true value is realized. The insights derived
+            from thoughtful analysis are more than just knowledge; they are
+            powerful tools for driving growth, optimizing processes, and
+            uncovering new opportunities.
+          </p>
+          <p className="text-silk text-sm md:text-base xl:text-xl">
+          With the right models and a strategic
+            approach, these insights become the foundation for impactful
+            decisions, guiding projects and companies toward measurable success.
+          </p>
+          <p className="text-silk text-sm md:text-base xl:text-xl">
+          I invite you to explore the examples and case studies throughout my
+            portfolio, showcasing how data-driven insights have been transformed
+            into actions that make a difference.
+          </p>
+        </div>
+
+        {/* Email Section */}
+        <div className="my-5 text-center">
+          <p className="text-silk">contact@gmail.com</p>
+        </div>
+      </div>
     </>
   );
 }

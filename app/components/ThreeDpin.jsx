@@ -1,34 +1,31 @@
+// ThreeDpin.js
+
 "use client";
 import React, { useEffect, useState } from "react";
-import { PinContainer } from "./ui/3d-pin"; // Adjust the import path as needed
+import { PinContainer } from "./ui/3d-pin";
 
-export default function ThreeDpin() {
+export default function ThreeDpin({ title, href, icon, imageSrc }) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // This ensures that the component only renders on the client side
     setIsClient(true);
   }, []);
 
   if (!isClient) return null;
 
   return (
-    <div className="h-[20rem] w-full flex">
-      <PinContainer
-        title="https://github.com/sawdi777"
-        href="https://github.com/sawdi777"
-      >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
-            Aceternity UI
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500">
-              Customizable Tailwind CSS and Framer Motion Components.
-            </span>
-          </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900" />
-          <i className="bx bxl-github"></i>
+    <div className="h-[10rem] w-[10rem] flex items-center justify-center">
+      <PinContainer title={title} href={href}>
+        <div className="flex justify-center items-center rounded-full w-[10rem] h-[10rem] bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900">
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt="Icon"
+              className="w-12 h-12 object-contain"
+            />
+          ) : (
+            <i className={`bx ${icon} text-white text-5xl`}></i>
+          )}
         </div>
       </PinContainer>
     </div>
