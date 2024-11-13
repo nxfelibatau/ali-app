@@ -1,5 +1,3 @@
-// ThreeDpin.js
-
 "use client";
 import React, { useEffect, useState } from "react";
 import { PinContainer } from "./ui/3d-pin";

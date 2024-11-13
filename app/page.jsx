@@ -53,8 +53,8 @@ export default function Home() {
 
       {/* Scrollable Content Section */}
       <section className="container mx-auto px-4 sm:px-8 mt-16">
-        <ProjectGrid />
-        <ProjectGrid />
+        <ProjectGrid dir="ltr" />
+        <ProjectGrid dir="rtl"/>
       </section>
       <div className="flex flex-col items-center justify-center mt-2 xl:mt-0 space-y-10">
         {/* Heading Section */}

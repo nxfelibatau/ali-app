@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "boxicons/css/boxicons.min.css";
+import { AnimatedModalDemo } from "./AnimatedModal";
 
 export default function Header() {
   return (
@@ -25,12 +26,11 @@ export default function Header() {
               type="button"
               className="text-white bx bx-globe hover:text-navy focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             ></button>
-            <button
-              type="button"
-              className="text-white bg-[#63a7bf] hover:bg-navy focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            <div
+              className="text-white bg-[#63a7bf] hover:bg-navy focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Let's talk
-            </button>
+              <AnimatedModalDemo/>
+            </div>
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
