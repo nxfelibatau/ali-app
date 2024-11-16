@@ -1,4 +1,3 @@
-// ProjecrGrid.js
 "use client";
 import React from "react";
 import MyChart from "./Chart";
@@ -11,7 +10,6 @@ const ProjecrGrid = ({ dir = "ltr" }) => {
       dir={dir}
       className="flex flex-col md:flex-row min-h-screen text-white"
     >
-      {/* Sidebar - Vertically centered content, aligned left on medium screens and above */}
       <div className="flex flex-col justify-center items-start md:w-1/2 w-full p-8 md:sticky top-0 md:h-screen">
         <div className="w-full text-center">
           <h2 className="text-2xl font-bold mb-4">What I'm capable of?</h2>
