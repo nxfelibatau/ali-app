@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import MyChart from "./Chart";
-import ThreeDpin from "./ThreeDpin";
+import FloatingDock from "./FloatingDock";
 import { ExpandableCardDemo } from "./ExpandableCards";
 
 const ProjecrGrid = ({ dir = "ltr" }) => {
@@ -21,19 +21,10 @@ const ProjecrGrid = ({ dir = "ltr" }) => {
 
       {/* Scrollable section - Takes full width on small screens */}
       <div className="md:w-1/2 w-full overflow-y-auto p-8 space-y-8">
-        <div className="flex flex-row gap-5 mt-20 justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
-          <ThreeDpin
-            title="https://github.com/sawdi777"
-            href="https://github.com/sawdi777"
-            icon="bxl-github"
-          />
-          <ThreeDpin
-            title="https://www.kaggle.com/sawdi777"
-            href="https://www.kaggle.com/sawdi777"
-            imageSrc="/images/kaggle.png"
-          />
-        </div>
         <ExpandableCardDemo />
+        <div className="flex flex-row gap-5 mt-20 justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
+          <FloatingDock />
+        </div>
       </div>
     </div>
   );

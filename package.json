@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.22.0",
     "boxicons": "^2.1.4",
     "chart.js": "^4.4.6",
     "chartjs-plugin-datalabels": "^2.2.0",
     "clsx": "^2.1.1",
     "flowbite": "^2.5.2",
-    "framer-motion": "^11.11.13",
+    "framer-motion": "^11.11.17",
     "gsap": "^3.12.5",
     "next": "14.2.15",
     "react": "^18",

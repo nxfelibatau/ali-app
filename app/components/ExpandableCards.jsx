@@ -144,13 +144,13 @@ export function ExpandableCardDemo() {
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-white dark:text-neutral-200 text-center md:text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  className="text-bone dark:text-neutral-400 text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>
@@ -283,6 +283,160 @@ const cards = [
           over a decade, Led Zeppelin has released numerous hit albums and
           singles that have garnered them a massive fan following both in the
           United Kingdom and abroad.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Mustafa Zahid",
+    title: "Toh Phir Aao",
+    src: "/images/AG.png",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
+          its intense storyline and powerful performances. Directed by Mohit
+          Suri, the film has become a significant work in the Indian film
+          industry. <br /> <br />
+          The movie explores themes of love, redemption, and sacrifice,
+          capturing the essence of human emotions and relationships. With a
+          gripping narrative and memorable music, "Aawarapan" has garnered a
+          massive fan following both in India and abroad, solidifying Emraan
+          Hashmi's status as a versatile actor.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Mustafa Zahid",
+    title: "Toh Phir Aao",
+    src: "/images/AG.png",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
+          its intense storyline and powerful performances. Directed by Mohit
+          Suri, the film has become a significant work in the Indian film
+          industry. <br /> <br />
+          The movie explores themes of love, redemption, and sacrifice,
+          capturing the essence of human emotions and relationships. With a
+          gripping narrative and memorable music, "Aawarapan" has garnered a
+          massive fan following both in India and abroad, solidifying Emraan
+          Hashmi's status as a versatile actor.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Mustafa Zahid",
+    title: "Toh Phir Aao",
+    src: "/images/AG.png",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
+          its intense storyline and powerful performances. Directed by Mohit
+          Suri, the film has become a significant work in the Indian film
+          industry. <br /> <br />
+          The movie explores themes of love, redemption, and sacrifice,
+          capturing the essence of human emotions and relationships. With a
+          gripping narrative and memorable music, "Aawarapan" has garnered a
+          massive fan following both in India and abroad, solidifying Emraan
+          Hashmi's status as a versatile actor.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Mustafa Zahid",
+    title: "Toh Phir Aao",
+    src: "/images/AG.png",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
+          its intense storyline and powerful performances. Directed by Mohit
+          Suri, the film has become a significant work in the Indian film
+          industry. <br /> <br />
+          The movie explores themes of love, redemption, and sacrifice,
+          capturing the essence of human emotions and relationships. With a
+          gripping narrative and memorable music, "Aawarapan" has garnered a
+          massive fan following both in India and abroad, solidifying Emraan
+          Hashmi's status as a versatile actor.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Mustafa Zahid",
+    title: "Toh Phir Aao",
+    src: "/images/AG.png",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
+          its intense storyline and powerful performances. Directed by Mohit
+          Suri, the film has become a significant work in the Indian film
+          industry. <br /> <br />
+          The movie explores themes of love, redemption, and sacrifice,
+          capturing the essence of human emotions and relationships. With a
+          gripping narrative and memorable music, "Aawarapan" has garnered a
+          massive fan following both in India and abroad, solidifying Emraan
+          Hashmi's status as a versatile actor.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Mustafa Zahid",
+    title: "Toh Phir Aao",
+    src: "/images/AG.png",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
+          its intense storyline and powerful performances. Directed by Mohit
+          Suri, the film has become a significant work in the Indian film
+          industry. <br /> <br />
+          The movie explores themes of love, redemption, and sacrifice,
+          capturing the essence of human emotions and relationships. With a
+          gripping narrative and memorable music, "Aawarapan" has garnered a
+          massive fan following both in India and abroad, solidifying Emraan
+          Hashmi's status as a versatile actor.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Mustafa Zahid",
+    title: "Toh Phir Aao",
+    src: "/images/AG.png",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
+          its intense storyline and powerful performances. Directed by Mohit
+          Suri, the film has become a significant work in the Indian film
+          industry. <br /> <br />
+          The movie explores themes of love, redemption, and sacrifice,
+          capturing the essence of human emotions and relationships. With a
+          gripping narrative and memorable music, "Aawarapan" has garnered a
+          massive fan following both in India and abroad, solidifying Emraan
+          Hashmi's status as a versatile actor.
         </p>
       );
     },

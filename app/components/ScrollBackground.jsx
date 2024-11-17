@@ -3,19 +3,18 @@ import { useEffect, useState } from "react";
 
 export default function ScrollBackground() {
   const colors = [
-    "rgba(99, 167, 191, 1)",
-    "rgba(147, 179, 208,1)",
-    "rgba(120, 157, 188,1)",
-    "rgba(123, 141, 175, 1)",
-    "rgba(108, 128, 158, 1)",
-    "rgba(91, 114, 142, 1)",
-    "rgba(74, 96, 120, 1)",
-    "rgba(58, 80, 107, 1)",
-    "rgba(44, 62, 80, 1)",
-    "rgba(43, 58, 74, 1)",
-    "rgba(31, 44, 60, 1)",
-    "rgba(22, 34, 42, 1)",
-    "rgba(11, 25, 44,1)"
+    "rgba(15,23,42,1)",
+    "rgba(11, 20, 44,1)",
+    "rgba(7, 17, 46,1)",
+    "rgba(3, 14, 48,1)",
+    "rgba(77, 96, 120, 1)",
+    "rgba(88, 114, 142, 1)",
+    "rgba(99, 128, 158, 1)",
+    "rgba(111, 141, 175, 1)",
+    "rgba(122, 157, 188,1)",
+    "rgba(133, 179, 208,1)",
+    "rgba(144, 167, 191, 1)", 
+    "#e9edf2ab",
   ];
 
   const [bgColor, setBgColor] = useState(colors[0]);

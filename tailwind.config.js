@@ -21,6 +21,7 @@ module.exports = {
         navy: "var(--my-navy)",
         grass: "var(--my-green)",
         silk: "var(--my-silk)",
+        bone: "var(--my-bone)",
         dead: "var(--my-dead)",
       },
     },

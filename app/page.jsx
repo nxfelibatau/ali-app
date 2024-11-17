@@ -11,7 +11,6 @@ export default function Home() {
       {/* Scrollable Background Wrapper */}
       <div className="relative w-full h-full">
         <ScrollBackground /> {/* ScrollBackground spans the entire page */}
-
         {/* First Section with BackgroundBoxesDemo */}
         <BackgroundBoxesDemo>
           {/* Main Content */}
@@ -33,9 +32,8 @@ export default function Home() {
                 <p className="text-silk text-base xl:text-xl">
                   <strong>Thank you for visiting my portfolio</strong> — a
                   showcase of transforming data into actionable insights. As a
-                  data scientist and machine learning specialist, I am
-                  committed to turning complex datasets into clear, strategic
-                  guidance.
+                  data scientist and machine learning specialist, I am committed
+                  to turning complex datasets into clear, strategic guidance.
                 </p>
                 <p className="text-silk text-base xl:text-xl">
                   My approach blends data exploration with customized
@@ -55,13 +53,11 @@ export default function Home() {
             </div>
           </div>
         </BackgroundBoxesDemo>
-
         {/* Scrollable Content Section */}
         <section className="container mx-auto px-4 sm:px-8 mt-16">
           <ProjectGrid dir="ltr" />
           <ProjectGrid dir="rtl" />
         </section>
-
         {/* Secondary Section */}
         <div className="flex flex-col items-center justify-center mt-16 space-y-10">
           <div className="text-center">
@@ -72,8 +68,20 @@ export default function Home() {
 
           <div className="text-center space-y-4 max-w-2xl">
             <p className="text-silk text-base xl:text-xl">
-              Insights drive growth, optimize processes, and uncover
-              opportunities. Explore how data-driven insights lead to success.
+              this is where data’s true value is realized. The insights derived
+              from thoughtful analysis are more than just knowledge; they are
+              powerful tools for driving growth, optimizing processes, and
+              uncovering new opportunities.
+            </p>
+            <p className="text-silk text-base xl:text-xl">
+              With the right models and a strategic approach, these insights
+              become the foundation for impactful decisions, guiding projects
+              and companies toward measurable success.
+            </p>
+            <p className="text-silk text-base xl:text-xl">
+              I invite you to explore the examples and case studies throughout
+              my portfolio, showcasing how data-driven insights have been
+              transformed into actions that make a difference.
             </p>
           </div>
 
