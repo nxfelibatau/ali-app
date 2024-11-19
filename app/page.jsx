@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./components/Header";
 import ScrollBackground from "./components/ScrollBackground";
 import ProjectGrid from "./components/ProjectGrid";
-import BackgroundBoxesDemo from "./components/BackgroundBoxes";
+import BackgroundBoxes from "./components/BackgroundBoxes";
 import FloatingNavbar from "./components/FloatingNavbar";
 
 export default function Page() {
@@ -26,6 +26,7 @@ export default function Page() {
         scrollTrigger: {
           trigger: panel,
           start: index === 0 ? "top top" : "bottom bottom", // Ensure first section animates normally
+          end:"70%+=100% top",
           pinSpacing: index === 0 ? true : false, // Allow pinSpacing for the first section
           pin: true,
           scrub: true,
@@ -59,7 +60,7 @@ export default function Page() {
         <ScrollBackground />
 
         {/* First Section with Background Boxes */}
-        <BackgroundBoxesDemo>
+        <BackgroundBoxes>
           <div
             className="container mx-auto px-4 sm:px-8 relative z-30 panel"
             style={{ minHeight: "100vh" }} // Ensure full height for the first section
@@ -101,7 +102,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-        </BackgroundBoxesDemo>
+        </BackgroundBoxes>
 
         {/* Scrollable Content Section */}
         <section className="container mx-auto px-4 sm:px-8 mt-16 panel">
