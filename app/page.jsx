@@ -4,10 +4,12 @@ import Header from "./components/Header";
 import ScrollBackground from "./components/ScrollBackground";
 import ProjectGrid from "./components/ProjectGrid";
 import BackgroundBoxesDemo from "./components/BackgroundBoxes";
+import FloatingNavbar from "./components/FloatingNavbar";
 
 export default function Home() {
   return (
     <>
+      <FloatingNavbar/>
       {/* Scrollable Background Wrapper */}
       <div className="relative w-full h-full">
         <ScrollBackground /> {/* ScrollBackground spans the entire page */}
