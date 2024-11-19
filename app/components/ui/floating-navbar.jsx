@@ -63,7 +63,7 @@ export const FloatingNav = ({ navItems, className }) => {
           </Link>
         ))}
         <button className="border text-sm font-medium relative border-neutral-200 hover:bg-navy dark:border-white/[0.2] text-black hover:text-silk dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
+          <span>Let's talk</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-navy to-transparent  h-px" />
         </button>
       </motion.div>

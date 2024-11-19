@@ -19,7 +19,7 @@ export default function FloatingDockDemo() {
       title: "Kaggle",
       icon: (
         <Image
-          src="/images/kaggle.png"
+          src="/images/k.png"
           width={100}
           height={100}
           alt="kaggle Logo"
