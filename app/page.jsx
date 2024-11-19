@@ -1,22 +1,69 @@
 "use client";
-import React from "react";
+
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./components/Header";
 import ScrollBackground from "./components/ScrollBackground";
 import ProjectGrid from "./components/ProjectGrid";
 import BackgroundBoxesDemo from "./components/BackgroundBoxes";
 import FloatingNavbar from "./components/FloatingNavbar";
 
-export default function Home() {
+export default function Page() {
+  useEffect(() => {
+    // Register GSAP ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Select all panels for the animation
+    const panels = gsap.utils.toArray(".panel");
+
+    // Remove the last panel if not needed in the animation
+    panels.pop();
+
+    // Loop through each panel and create the ScrollTrigger animation
+    panels.forEach((panel, index) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: panel,
+          start: index === 0 ? "top top" : "bottom bottom", // Ensure first section animates normally
+          pinSpacing: index === 0 ? true : false, // Allow pinSpacing for the first section
+          pin: true,
+          scrub: true,
+          onRefresh: () =>
+            gsap.set(panel, {
+              transformOrigin:
+                "center " +
+                (panel.offsetHeight - window.innerHeight / 2) +
+                "px",
+            }),
+        },
+      });
+
+      // Define animations for each panel
+      tl.fromTo(
+        panel,
+        { y: 0, rotate: 0, scale: 1, opacity: 1 },
+        { y: 0, rotateX: 0, scale: 0.5, opacity: 0.5 }
+      ).to(panel, { opacity: 0 }, 0.1);
+    });
+  }, []);
+
   return (
     <>
-      <FloatingNavbar/>
-      {/* Scrollable Background Wrapper */}
+      {/* Floating Navigation Bar */}
+      <FloatingNavbar />
+
+      {/* Main Wrapper */}
       <div className="relative w-full h-full">
-        <ScrollBackground /> {/* ScrollBackground spans the entire page */}
-        {/* First Section with BackgroundBoxesDemo */}
+        {/* Scrollable Background */}
+        <ScrollBackground />
+
+        {/* First Section with Background Boxes */}
         <BackgroundBoxesDemo>
-          {/* Main Content */}
-          <div className="container mx-auto px-4 sm:px-8 relative z-30">
+          <div
+            className="container mx-auto px-4 sm:px-8 relative z-30 panel"
+            style={{ minHeight: "100vh" }} // Ensure full height for the first section
+          >
             <header>
               <Header />
             </header>
@@ -55,13 +102,16 @@ export default function Home() {
             </div>
           </div>
         </BackgroundBoxesDemo>
+
         {/* Scrollable Content Section */}
-        <section className="container mx-auto px-4 sm:px-8 mt-16">
+        <section className="container mx-auto px-4 sm:px-8 mt-16 panel">
           <ProjectGrid dir="ltr" />
+        </section>
+        <section className="container mx-auto px-4 sm:px-8 mt-16 panel">
           <ProjectGrid dir="rtl" />
         </section>
         {/* Secondary Section */}
-        <div className="flex flex-col items-center justify-center mt-16 space-y-10">
+        <div className="flex flex-col items-center justify-center mt-16 mb-6 md:mb-16 space-y-10 panel">
           <div className="text-center">
             <p className="text-silk text-4xl md:text-5xl">
               From <span className="font-bold">Insight</span> to Action
@@ -70,7 +120,7 @@ export default function Home() {
 
           <div className="text-center space-y-4 max-w-2xl">
             <p className="text-silk text-base xl:text-xl">
-              this is where data’s true value is realized. The insights derived
+              This is where data’s true value is realized. The insights derived
               from thoughtful analysis are more than just knowledge; they are
               powerful tools for driving growth, optimizing processes, and
               uncovering new opportunities.
