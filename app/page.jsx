@@ -26,17 +26,17 @@ export default function Page() {
         scrollTrigger: {
           trigger: panel,
           start: index === 0 ? "top top" : "bottom bottom", // Ensure first section animates normally
-          end:"70%+=100% top",
+          end: index === 0 ? "5%" : "40%+=100% top",
           pinSpacing: index === 0 ? true : false, // Allow pinSpacing for the first section
           pin: true,
           scrub: true,
-          onRefresh: () =>
-            gsap.set(panel, {
-              transformOrigin:
-                "center " +
-                (panel.offsetHeight - window.innerHeight / 2) +
-                "px",
-            }),
+          // onRefresh: () =>
+          //   gsap.set(panel, {
+          //     transformOrigin:
+          //       "center " +
+          //       (panel.offsetHeight - window.innerHeight / 2) +
+          //       "px",
+          //   }),
         },
       });
 
@@ -57,7 +57,7 @@ export default function Page() {
       {/* Main Wrapper */}
       <div className="relative w-full h-full">
         {/* Scrollable Background */}
-        <ScrollBackground />
+        {/* <ScrollBackground /> */}
 
         {/* First Section with Background Boxes */}
         <BackgroundBoxes>
@@ -112,6 +112,7 @@ export default function Page() {
           <ProjectGrid dir="rtl" />
         </section>
         {/* Secondary Section */}
+        <BackgroundBoxes>
         <div className="flex flex-col items-center justify-center mt-16 mb-6 md:mb-16 space-y-10 panel">
           <div className="text-center">
             <p className="text-silk text-4xl md:text-5xl">
@@ -142,6 +143,7 @@ export default function Page() {
             <p className="text-silk">contact@gmail.com</p>
           </div>
         </div>
+          </BackgroundBoxes>
       </div>
     </>
   );

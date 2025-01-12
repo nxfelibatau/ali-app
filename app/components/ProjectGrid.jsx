@@ -3,6 +3,7 @@ import React from "react";
 import MyChart from "./Chart";
 import FloatingDock from "./FloatingDock";
 import { ExpandableCardDemo } from "./ExpandableCards";
+import { StickyScrollRevealDemo } from "./StickyScrollReveal";
 
 const ProjecrGrid = ({ dir = "ltr" }) => {
   return (

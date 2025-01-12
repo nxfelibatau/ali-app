@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.17.10",
     "@tabler/icons-react": "^3.22.0",
+    "@types/three": "^0.170.0",
     "boxicons": "^2.1.4",
     "chart.js": "^4.4.6",
     "chartjs-plugin-datalabels": "^2.2.0",
@@ -21,7 +23,8 @@
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.4",
+    "three": "^0.170.0"
   },
   "devDependencies": {
     "postcss": "^8",

@@ -13,7 +13,7 @@ export default function ScrollBackground() {
     "rgba(111, 141, 175, 1)",
     "rgba(122, 157, 188,1)",
     "rgba(133, 179, 208,1)",
-    "rgba(144, 167, 191, 1)", 
+    "rgba(144, 167, 191, 1)",
     "#e9edf2ab",
   ];
 
