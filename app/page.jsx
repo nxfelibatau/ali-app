@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./components/Header";
-import ScrollBackground from "./components/ScrollBackground";
 import ProjectGrid from "./components/ProjectGrid";
 import BackgroundBoxes from "./components/BackgroundBoxes";
 import FloatingNavbar from "./components/FloatingNavbar";
@@ -26,7 +25,7 @@ export default function Page() {
         scrollTrigger: {
           trigger: panel,
           start: index === 0 ? "top top" : "bottom bottom", // Ensure first section animates normally
-          end: index === 0 ? "5%" : "40%+=100% top",
+          end: index === 0 ? "5%" : "90%+=100% top",
           pinSpacing: index === 0 ? true : false, // Allow pinSpacing for the first section
           pin: true,
           scrub: true,
@@ -56,29 +55,25 @@ export default function Page() {
 
       {/* Main Wrapper */}
       <div className="relative w-full h-full">
-        {/* Scrollable Background */}
-        {/* <ScrollBackground /> */}
-
+        <header>
+          <Header />
+        </header>
         {/* First Section with Background Boxes */}
         <BackgroundBoxes>
-          <div
-            className="container mx-auto px-4 sm:px-8 relative z-30 panel"
-            style={{ minHeight: "100vh" }} // Ensure full height for the first section
-          >
-            <header>
-              <Header />
-            </header>
-
-            <div className="flex flex-col items-center justify-center mt-10 space-y-10">
+          <div className="container mx-auto">
+            <div
+              className="flex flex-wrap px-4 sm:px-8 relative z-30 panel"
+              style={{ minHeight: "100vh" }} // Ensure full height for the first section
+            >
               {/* Heading Section */}
-              <div className="text-center">
+              <div className="w-1/2 flex items-center text-center">
                 <p className="text-silk text-4xl md:text-5xl">
                   Data to <span className="font-bold">Insights</span>
                 </p>
               </div>
 
               {/* Paragraph Section */}
-              <div className="text-center space-y-4 max-w-2xl">
+              <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
                 <p className="text-silk text-base xl:text-xl">
                   <strong>Thank you for visiting my portfolio</strong> — a
                   showcase of transforming data into actionable insights. As a
@@ -97,7 +92,7 @@ export default function Page() {
               </div>
 
               {/* Contact Info */}
-              <div className="text-center">
+              <div className="w-full text-center">
                 <p className="text-silk">contact@gmail.com</p>
               </div>
             </div>
@@ -113,37 +108,45 @@ export default function Page() {
         </section>
         {/* Secondary Section */}
         <BackgroundBoxes>
-        <div className="flex flex-col items-center justify-center mt-16 mb-6 md:mb-16 space-y-10 panel">
-          <div className="text-center">
-            <p className="text-silk text-4xl md:text-5xl">
-              From <span className="font-bold">Insight</span> to Action
-            </p>
-          </div>
+          <div className="container mx-auto">
+            <div
+              className="flex flex-wrap px-4 sm:px-8 relative z-30 panel"
+              style={{ minHeight: "100vh" }} // Ensure full height for the first section
+            >
+              {/* Heading Section */}
+              <div className="w-1/2 flex items-center text-center">
+                <p className="text-silk text-4xl md:text-5xl">
+                  From <span className="font-bold">Insight</span> to action
+                </p>
+              </div>
 
-          <div className="text-center space-y-4 max-w-2xl">
-            <p className="text-silk text-base xl:text-xl">
-              This is where data’s true value is realized. The insights derived
-              from thoughtful analysis are more than just knowledge; they are
-              powerful tools for driving growth, optimizing processes, and
-              uncovering new opportunities.
-            </p>
-            <p className="text-silk text-base xl:text-xl">
-              With the right models and a strategic approach, these insights
-              become the foundation for impactful decisions, guiding projects
-              and companies toward measurable success.
-            </p>
-            <p className="text-silk text-base xl:text-xl">
-              I invite you to explore the examples and case studies throughout
-              my portfolio, showcasing how data-driven insights have been
-              transformed into actions that make a difference.
-            </p>
-          </div>
+              {/* Paragraph Section */}
+              <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
+                <p className="text-silk text-base xl:text-xl">
+                  This is where data's true value is realized. The isights
+                  derived from thoughtful analysis are more than just knowledge;
+                  they are powerful tools for driving growth, optimizing
+                  procrsses, and uncovering new opportunities.
+                </p>
+                <p className="text-silk text-base xl:text-xl">
+                  With the right models and a strategic approach, these insights
+                  become the foundation for impactful decisions, guiding
+                  projects and companies toward measurable success.
+                </p>
+                <p className="text-silk text-base xl:text-xl">
+                  I invite you to explore the examples and case studies
+                  throughout my portfolio, showcasing how data-driven insights
+                  have been transformed into actions that make a difference.
+                </p>
+              </div>
 
-          <div className="text-center">
-            <p className="text-silk">contact@gmail.com</p>
+              {/* Contact Info */}
+              <div className="w-full text-center">
+                <p className="text-silk">contact@gmail.com</p>
+              </div>
+            </div>
           </div>
-        </div>
-          </BackgroundBoxes>
+        </BackgroundBoxes>
       </div>
     </>
   );
