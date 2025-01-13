@@ -1,87 +1,88 @@
 "use client";
-import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS, BarElement, Tooltip, Legend, CategoryScale, LinearScale } from "chart.js";
 
-ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
+import * as d3 from "d3";
+import { useEffect, useRef } from "react";
 
-const data = {
-  labels: ["Machine Learning", "Data Analysis", "Deep Learning", "Reinforcement Learning", "Image Processing", "Natural Language Processing"],
-  datasets: [
-    {
-      label: "Skills",
-      data: [35, 25, 20, 10, 5, 5],
-      backgroundColor: [
-        "rgba(223, 200, 191, 0.774)",
-        "rgba(157, 150, 145, 0.774)",
-        "rgba(177, 145, 107, 0.774)",
-        "rgba(157, 100, 90, 0.744)",
-        "rgba(93, 140, 100, 0.774)",
-        "rgba(216, 205, 99, 0.744)",
-      ],
-      borderColor: [
-        "rgba(223, 200, 191)",
-        "rgba(157, 150, 145)",
-        "rgba(177, 145, 107)",
-        "rgba(157, 100, 90)",
-        "rgba(93, 140, 100)",
-        "rgba(216, 205, 99)",
-      ],
-      borderWidth: 2,
-    },
-  ],
+const MyChart = () => {
+  const svgRef = useRef();
+
+  useEffect(() => {
+    const width = 928;
+    const height = width;
+    const margin = 1;
+
+    // Updated labels and values
+    const data = [
+      { id: "Machine Learning", value: 35 },
+      { id: "Data Analysis", value: 25 },
+      { id: "Deep Learning", value: 20 },
+      { id: "Reinforcement Learning", value: 10 },
+      { id: "Image Processing", value: 5 },
+      { id: "Natural Language Processing", value: 5 },
+    ];
+
+    const total = d3.sum(data, (d) => d.value);
+
+    const format = d3.format(",d");
+    const color = d3.scaleOrdinal(d3.schemeTableau10);
+
+    const pack = d3.pack().size([width - margin * 2, height - margin * 2]).padding(3);
+
+    const root = pack(
+      d3.hierarchy({ children: data }).sum((d) => d.value)
+    );
+
+    const svg = d3
+      .select(svgRef.current)
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [-margin, -margin, width, height])
+      .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;")
+      .attr("text-anchor", "middle");
+
+    const node = svg
+      .append("g")
+      .selectAll("g")
+      .data(root.leaves())
+      .join("g")
+      .attr("transform", (d) => `translate(${d.x},${d.y})`);
+
+    // Tooltip title
+    node
+      .append("title")
+      .text((d) => `${d.data.id}\n${format(d.value)}`);
+
+    // Bubbles
+    node
+      .append("circle")
+      .attr("fill-opacity", 0.7)
+      .attr("fill", (d) => color(d.data.id))
+      .attr("r", (d) => d.r);
+
+    // Labels
+    node
+      .append("text")
+      .style("fill", "white")
+      .style("font-size", "20px")
+      .style("pointer-events", "none")
+      .selectAll("tspan")
+      .data((d) => d.data.id.split(" "))
+      .join("tspan")
+      .attr("x", 0)
+      .attr("y", (d, i, nodes) => `${i - nodes.length / 2 + 0.35}em`)
+      .text((d) => d);
+
+    // Percentage values
+    node
+      .append("text")
+      .style("fill", "white")
+      .style("font-size", "20px")
+      .style("font-weight", "bold")
+      .attr("dy", "1.85em")
+      .text((d) => `${((d.data.value / total) * 100).toFixed(1)}%`);
+  }, []);
+
+  return <svg ref={svgRef}></svg>;
 };
 
-const options = {
-  responsive: true,
-  indexAxis: 'y', // Set axis to horizontal
-  plugins: {
-    legend: {
-      display: false,
-    },
-    tooltip: {
-      callbacks: {
-        label: function (tooltipItem) {
-          return `${tooltipItem.raw}%`; // Display percentage in tooltip
-        },
-      },
-      bodyColor: "#FFFFFF", // Tooltip text color
-      titleColor: "#FFFFFF", // Tooltip title color
-    },
-    title: {
-      display: true,
-      text: "Skills Distribution",
-      color: "#FFFFFF", // Title color
-    },
-  },
-  scales: {
-    x: {
-      beginAtZero: true,
-      max: 100, // Set maximum to 100 for percentage scale
-      ticks: {
-        callback: function (value) {
-          return `${value}%`; // Display percentage symbol on x-axis
-        },
-        color: "#FFFFFF", // X-axis tick color
-      },
-      grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Light white grid lines
-      },
-    },
-    y: {
-      ticks: {
-        color: "#FFFFFF", // Y-axis tick color
-      },
-      grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Light white grid lines
-      },
-    },
-  },
-};
-
-export default function MyChart() {
-  return (
-    <div>
-      <Bar data={data} options={options} />
-    </div>
-  );
-}
+export default MyChart;

@@ -25,7 +25,7 @@ export default function Page() {
         scrollTrigger: {
           trigger: panel,
           start: index === 0 ? "top top" : "bottom bottom", // Ensure first section animates normally
-          end: index === 0 ? "5%" : "90%+=100% top",
+          end:"90%+=100% top",
           pinSpacing: index === 0 ? true : false, // Allow pinSpacing for the first section
           pin: true,
           scrub: true,
