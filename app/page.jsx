@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./components/Header";
-import ProjectGrid from "./components/ProjectGrid";
+import ProjectGrid from "./components/ProjectGrid"; // Ensure this import is correct
 import BackgroundBoxes from "./components/BackgroundBoxes";
 import FloatingNavbar from "./components/FloatingNavbar";
 
@@ -13,33 +13,21 @@ export default function Page() {
     // Register GSAP ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    // Select all panels for the animation
     const panels = gsap.utils.toArray(".panel");
-
-    // Remove the last panel if not needed in the animation
     panels.pop();
 
-    // Loop through each panel and create the ScrollTrigger animation
     panels.forEach((panel, index) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: panel,
-          start: index === 0 ? "top top" : "bottom bottom", // Ensure first section animates normally
-          end:"90%+=100% top",
-          pinSpacing: index === 0 ? true : false, // Allow pinSpacing for the first section
+          start: index === 0 ? "top top" : "bottom bottom",
+          end: "70%+=100% top",
+          pinSpacing: index === 0 ? true : false,
           pin: true,
           scrub: true,
-          // onRefresh: () =>
-          //   gsap.set(panel, {
-          //     transformOrigin:
-          //       "center " +
-          //       (panel.offsetHeight - window.innerHeight / 2) +
-          //       "px",
-          //   }),
         },
       });
 
-      // Define animations for each panel
       tl.fromTo(
         panel,
         { y: 0, rotate: 0, scale: 1, opacity: 1 },
@@ -47,6 +35,22 @@ export default function Page() {
       ).to(panel, { opacity: 0 }, 0.1);
     });
   }, []);
+
+  const chartData1 = [
+    { id: "Machine Learning", value: 35 },
+    { id: "Data Analysis", value: 25 },
+    { id: "Deep Learning", value: 20 },
+    { id: "Reinforcement Learning", value: 10 },
+    { id: "Image Processing", value: 5 },
+    { id: "Natural Language Processing", value: 5 },
+  ];
+
+  const chartData2 = [
+    { id: "English", value: 40 },
+    { id: "Germany", value: 30 },
+    { id: "Arabic", value: 20 },
+    { id: "French", value: 10 },
+  ];
 
   return (
     <>
@@ -58,13 +62,11 @@ export default function Page() {
         <header>
           <Header />
         </header>
+
         {/* First Section with Background Boxes */}
         <BackgroundBoxes>
           <div className="container mx-auto">
-            <div
-              className="flex flex-wrap px-4 sm:px-8 relative z-30 panel"
-              style={{ minHeight: "100vh" }} // Ensure full height for the first section
-            >
+            <div className="flex flex-wrap px-4 sm:px-8 relative z-30 panel" style={{ minHeight: "100vh" }}>
               {/* Heading Section */}
               <div className="w-1/2 flex items-center text-center">
                 <p className="text-silk text-4xl md:text-5xl">
@@ -99,20 +101,20 @@ export default function Page() {
           </div>
         </BackgroundBoxes>
 
-        {/* Scrollable Content Section */}
+        {/* First ProjecrGrid Instance */}
         <section className="container mx-auto px-4 sm:px-8 mt-16 panel">
-          <ProjectGrid dir="ltr" />
+          <ProjectGrid dir="ltr" heading="What I'm capable of?" data={chartData1} />
         </section>
+
+        {/* Second ProjecrGrid Instance */}
         <section className="container mx-auto px-4 sm:px-8 mt-16 panel">
-          <ProjectGrid dir="rtl" />
+          <ProjectGrid dir="rtl" heading="My Language Skills" data={chartData2} />
         </section>
+
         {/* Secondary Section */}
         <BackgroundBoxes>
           <div className="container mx-auto">
-            <div
-              className="flex flex-wrap px-4 sm:px-8 relative z-30 panel"
-              style={{ minHeight: "100vh" }} // Ensure full height for the first section
-            >
+            <div className="flex flex-wrap px-4 sm:px-8 relative z-30 panel" style={{ minHeight: "100vh" }}>
               {/* Heading Section */}
               <div className="w-1/2 flex items-center text-center">
                 <p className="text-silk text-4xl md:text-5xl">
