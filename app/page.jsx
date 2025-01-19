@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import ProjectGrid from "./components/ProjectGrid"; // Ensure this import is correct
 import BackgroundBoxes from "./components/BackgroundBoxes";
 import FloatingNavbar from "./components/FloatingNavbar";
+import CardStack from "./components/CardStack";
+import GridBackground from "./components/GridBackground";
 
 export default function Page() {
   useEffect(() => {
@@ -62,93 +64,130 @@ export default function Page() {
         <header>
           <Header />
         </header>
+        <main>
+          {/* First Section with Background Boxes */}
+          <BackgroundBoxes>
+            <div className="container mx-auto">
+              <div
+                className="flex flex-wrap px-4 sm:px-8 relative z-30 panel"
+                style={{ minHeight: "100vh" }}
+              >
+                {/* Heading Section */}
+                <div className="w-1/2 flex items-center text-center">
+                  <p className="text-silk text-4xl md:text-5xl">
+                    Data to <span className="font-bold">Insights</span>
+                  </p>
+                </div>
 
-        {/* First Section with Background Boxes */}
-        <BackgroundBoxes>
-          <div className="container mx-auto">
-            <div className="flex flex-wrap px-4 sm:px-8 relative z-30 panel" style={{ minHeight: "100vh" }}>
-              {/* Heading Section */}
-              <div className="w-1/2 flex items-center text-center">
-                <p className="text-silk text-4xl md:text-5xl">
-                  Data to <span className="font-bold">Insights</span>
-                </p>
-              </div>
+                {/* Paragraph Section */}
+                <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
+                  <p className="text-silk text-base xl:text-xl">
+                    <strong>Thank you for visiting my portfolio</strong> — a
+                    showcase of transforming data into actionable insights. As a
+                    data scientist and machine learning specialist, I am
+                    committed to turning complex datasets into clear, strategic
+                    guidance.
+                  </p>
+                  <p className="text-silk text-base xl:text-xl">
+                    My approach blends data exploration with customized
+                    mathematical and AI models, ensuring transparency and
+                    precision.
+                  </p>
+                  <p className="text-silk text-base xl:text-xl">
+                    Here, I bring technical rigor and a passion for uncovering
+                    insights to help your data tell impactful stories.
+                  </p>
+                </div>
 
-              {/* Paragraph Section */}
-              <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
-                <p className="text-silk text-base xl:text-xl">
-                  <strong>Thank you for visiting my portfolio</strong> — a
-                  showcase of transforming data into actionable insights. As a
-                  data scientist and machine learning specialist, I am committed
-                  to turning complex datasets into clear, strategic guidance.
-                </p>
-                <p className="text-silk text-base xl:text-xl">
-                  My approach blends data exploration with customized
-                  mathematical and AI models, ensuring transparency and
-                  precision.
-                </p>
-                <p className="text-silk text-base xl:text-xl">
-                  Here, I bring technical rigor and a passion for uncovering
-                  insights to help your data tell impactful stories.
-                </p>
-              </div>
-
-              {/* Contact Info */}
-              <div className="w-full text-center">
-                <p className="text-silk">contact@gmail.com</p>
-              </div>
-            </div>
-          </div>
-        </BackgroundBoxes>
-
-        {/* First ProjecrGrid Instance */}
-        <section className="container mx-auto px-4 sm:px-8 mt-16 panel">
-          <ProjectGrid dir="ltr" heading="What I'm capable of?" data={chartData1} />
-        </section>
-
-        {/* Second ProjecrGrid Instance */}
-        <section className="container mx-auto px-4 sm:px-8 mt-16 panel">
-          <ProjectGrid dir="rtl" heading="My Language Skills" data={chartData2} />
-        </section>
-
-        {/* Secondary Section */}
-        <BackgroundBoxes>
-          <div className="container mx-auto">
-            <div className="flex flex-wrap px-4 sm:px-8 relative z-30 panel" style={{ minHeight: "100vh" }}>
-              {/* Heading Section */}
-              <div className="w-1/2 flex items-center text-center">
-                <p className="text-silk text-4xl md:text-5xl">
-                  From <span className="font-bold">Insight</span> to action
-                </p>
-              </div>
-
-              {/* Paragraph Section */}
-              <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
-                <p className="text-silk text-base xl:text-xl">
-                  This is where data's true value is realized. The isights
-                  derived from thoughtful analysis are more than just knowledge;
-                  they are powerful tools for driving growth, optimizing
-                  procrsses, and uncovering new opportunities.
-                </p>
-                <p className="text-silk text-base xl:text-xl">
-                  With the right models and a strategic approach, these insights
-                  become the foundation for impactful decisions, guiding
-                  projects and companies toward measurable success.
-                </p>
-                <p className="text-silk text-base xl:text-xl">
-                  I invite you to explore the examples and case studies
-                  throughout my portfolio, showcasing how data-driven insights
-                  have been transformed into actions that make a difference.
-                </p>
-              </div>
-
-              {/* Contact Info */}
-              <div className="w-full text-center">
-                <p className="text-silk">contact@gmail.com</p>
+                {/* Contact Info */}
+                <div className="w-full text-center">
+                  <p className="text-silk">contact@gmail.com</p>
+                </div>
               </div>
             </div>
+          </BackgroundBoxes>
+
+          {/* First ProjecrGrid Instance */}
+          <section className="panel">
+            <GridBackground>
+              <div className="container mx-auto px-4 sm:px-8 mt-16">
+                <ProjectGrid
+                  dir="ltr"
+                  heading="What I'm capable of?"
+                  data={chartData1}
+                />
+              </div>
+            </GridBackground>
+          </section>
+
+          {/* Second ProjecrGrid Instance */}
+          <section className="panel">
+            <GridBackground>
+              <div className="container mx-auto px-4 sm:px-8 mt-16">
+                <ProjectGrid
+                  dir="rtl"
+                  heading="My Language Skills"
+                  data={chartData2}
+                />
+              </div>
+            </GridBackground>
+          </section>
+          <div className="panel">
+            <GridBackground>
+              <div className="container mx-auto">
+                <div className="flex justify-between">
+                  <div className="w-1/2">
+                    <CardStack />
+                  </div>
+                  <div className="flex items-center justify-center w-1/2">
+                    About me
+                  </div>
+                </div>
+              </div>
+            </GridBackground>
           </div>
-        </BackgroundBoxes>
+          {/* Secondary Section */}
+          <BackgroundBoxes>
+            <div className="container mx-auto">
+              <div
+                className="flex flex-wrap px-4 sm:px-8 relative z-30 panel"
+                style={{ minHeight: "100vh" }}
+              >
+                {/* Heading Section */}
+                <div className="w-1/2 flex items-center text-center">
+                  <p className="text-silk text-4xl md:text-5xl">
+                    From <span className="font-bold">Insight</span> to action
+                  </p>
+                </div>
+
+                {/* Paragraph Section */}
+                <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
+                  <p className="text-silk text-base xl:text-xl">
+                    This is where data's true value is realized. The isights
+                    derived from thoughtful analysis are more than just
+                    knowledge; they are powerful tools for driving growth,
+                    optimizing procrsses, and uncovering new opportunities.
+                  </p>
+                  <p className="text-silk text-base xl:text-xl">
+                    With the right models and a strategic approach, these
+                    insights become the foundation for impactful decisions,
+                    guiding projects and companies toward measurable success.
+                  </p>
+                  <p className="text-silk text-base xl:text-xl">
+                    I invite you to explore the examples and case studies
+                    throughout my portfolio, showcasing how data-driven insights
+                    have been transformed into actions that make a difference.
+                  </p>
+                </div>
+
+                {/* Contact Info */}
+                <div className="w-full text-center">
+                  <p className="text-silk">contact@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </BackgroundBoxes>
+        </main>
       </div>
     </>
   );

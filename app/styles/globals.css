@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --my-navy: #0F172A;
+  --my-navy: #0f172a;
   --my-green: #8decb4;
   --my-silk: #e3efd3;
-  --my-bone:#e9edf2ab;
-  --my-dead:#374151;
+  --my-bone: #e9edf2ab;
+  --my-dead: #374151;
 }
 @keyframes fadeIn {
   0% {

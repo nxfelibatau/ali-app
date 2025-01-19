@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "boxicons/css/boxicons.min.css";
-import { AnimatedModalDemo } from "./AnimatedModal";
+import AnimatedModal from "./AnimatedModal";
 
 export default function Header() {
   return (
@@ -29,7 +29,7 @@ export default function Header() {
             <div
               className="text-white bg-transparent hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:hover:bg-gray-700 dark:focus:ring-blue-800"
             >
-              <AnimatedModalDemo />
+              <AnimatedModal />
             </div>
             <button
               data-collapse-toggle="navbar-sticky"
