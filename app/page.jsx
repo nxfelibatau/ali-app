@@ -7,8 +7,8 @@ import Header from "./components/Header";
 import ProjectGrid from "./components/ProjectGrid"; // Ensure this import is correct
 import BackgroundBoxes from "./components/BackgroundBoxes";
 import FloatingNavbar from "./components/FloatingNavbar";
-import CardStack from "./components/CardStack";
 import GridBackground from "./components/GridBackground";
+import StickyScrollReveal from "./components/StickyScrollReveal";
 
 export default function Page() {
   useEffect(() => {
@@ -81,19 +81,19 @@ export default function Page() {
 
                 {/* Paragraph Section */}
                 <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
-                  <p className="text-silk text-base xl:text-xl">
+                  <p className="text-silk font-semibold text-base xl:text-xl">
                     <strong>Thank you for visiting my portfolio</strong> — a
                     showcase of transforming data into actionable insights. As a
                     data scientist and machine learning specialist, I am
                     committed to turning complex datasets into clear, strategic
                     guidance.
                   </p>
-                  <p className="text-silk text-base xl:text-xl">
+                  <p className="text-silk font-semibold text-base xl:text-xl">
                     My approach blends data exploration with customized
                     mathematical and AI models, ensuring transparency and
                     precision.
                   </p>
-                  <p className="text-silk text-base xl:text-xl">
+                  <p className="text-silk font-semibold text-base xl:text-xl">
                     Here, I bring technical rigor and a passion for uncovering
                     insights to help your data tell impactful stories.
                   </p>
@@ -101,7 +101,7 @@ export default function Page() {
 
                 {/* Contact Info */}
                 <div className="w-full text-center">
-                  <p className="text-silk">contact@gmail.com</p>
+                  <p className="text-silk font-semibold">contact@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -134,16 +134,7 @@ export default function Page() {
           </section>
           <div className="panel">
             <GridBackground>
-              <div className="container mx-auto">
-                <div className="flex justify-between">
-                  <div className="w-1/2">
-                    <CardStack />
-                  </div>
-                  <div className="flex items-center justify-center w-1/2">
-                    About me
-                  </div>
-                </div>
-              </div>
+              <StickyScrollReveal />
             </GridBackground>
           </div>
           {/* Secondary Section */}
@@ -155,25 +146,25 @@ export default function Page() {
               >
                 {/* Heading Section */}
                 <div className="w-1/2 flex items-center text-center">
-                  <p className="text-silk text-4xl md:text-5xl">
+                  <p className="text-navy text-4xl md:text-5xl">
                     From <span className="font-bold">Insight</span> to action
                   </p>
                 </div>
 
                 {/* Paragraph Section */}
                 <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
-                  <p className="text-silk text-base xl:text-xl">
+                  <p className="text-navy font-semibold text-base xl:text-xl">
                     This is where data's true value is realized. The isights
                     derived from thoughtful analysis are more than just
                     knowledge; they are powerful tools for driving growth,
                     optimizing procrsses, and uncovering new opportunities.
                   </p>
-                  <p className="text-silk text-base xl:text-xl">
+                  <p className="text-navy font-semibold text-base xl:text-xl">
                     With the right models and a strategic approach, these
                     insights become the foundation for impactful decisions,
                     guiding projects and companies toward measurable success.
                   </p>
-                  <p className="text-silk text-base xl:text-xl">
+                  <p className="text-navy font-semibold text-base xl:text-xl">
                     I invite you to explore the examples and case studies
                     throughout my portfolio, showcasing how data-driven insights
                     have been transformed into actions that make a difference.
@@ -182,7 +173,7 @@ export default function Page() {
 
                 {/* Contact Info */}
                 <div className="w-full text-center">
-                  <p className="text-silk">contact@gmail.com</p>
+                  <p className="text-navy font-semibold">contact@gmail.com</p>
                 </div>
               </div>
             </div>

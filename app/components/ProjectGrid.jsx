@@ -5,7 +5,8 @@ import React from "react";
 import FloatingDock from "./FloatingDock";
 import { ExpandableCardDemo } from "./ExpandableCards";
 
-const MyChart = ({ data }) => { // Accept 'data' prop here
+const MyChart = ({ data }) => {
+  // Accept 'data' prop here
   const svgRef = useRef();
 
   useEffect(() => {
@@ -18,7 +19,10 @@ const MyChart = ({ data }) => { // Accept 'data' prop here
     const format = d3.format(",d");
     const color = d3.scaleOrdinal(d3.schemeTableau10);
 
-    const pack = d3.pack().size([width - margin * 2, height - margin * 2]).padding(3);
+    const pack = d3
+      .pack()
+      .size([width - margin * 2, height - margin * 2])
+      .padding(3);
 
     const root = pack(d3.hierarchy({ children: data }).sum((d) => d.value));
 
@@ -38,9 +42,7 @@ const MyChart = ({ data }) => { // Accept 'data' prop here
       .attr("transform", (d) => `translate(${d.x},${d.y})`);
 
     // Tooltip title
-    node
-      .append("title")
-      .text((d) => `${d.data.id}\n${format(d.value)}`);
+    node.append("title").text((d) => `${d.data.id}\n${format(d.value)}`);
 
     // Bubbles
     node
