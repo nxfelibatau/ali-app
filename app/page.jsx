@@ -33,7 +33,7 @@ export default function Page() {
       tl.fromTo(
         panel,
         { y: 0, rotate: 0, scale: 1, opacity: 1 },
-        { y: 0, rotateX: 0, scale: 0.5, opacity: 0.5 }
+        { y: 0, rotateX: 0, scale: 1, opacity: 0.5 }
       ).to(panel, { opacity: 0 }, 0.1);
     });
   }, []);
@@ -50,7 +50,6 @@ export default function Page() {
   const chartData2 = [
     { id: "English", value: 40 },
     { id: "Germany", value: 30 },
-    { id: "Arabic", value: 20 },
     { id: "French", value: 10 },
   ];
 
