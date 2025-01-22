@@ -3,7 +3,6 @@ import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 import React from "react";
 import FloatingDock from "./FloatingDock";
-// import { ExpandableCardDemo } from "./ExpandableCards";
 import { Accordion, AccordionItem } from "@heroui/react";
 
 const AccordionDemo = ({ data2 }) => {
