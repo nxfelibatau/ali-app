@@ -9,6 +9,7 @@ import BackgroundBoxes from "./components/BackgroundBoxes";
 import FloatingNavbar from "./components/FloatingNavbar";
 import GridBackground from "./components/GridBackground";
 import StickyScrollReveal from "./components/StickyScrollReveal";
+import Footer from "./components/Footer";
 
 export default function Page() {
   useEffect(() => {
@@ -131,6 +132,7 @@ export default function Page() {
               </div>
             </GridBackground>
           </section>
+          {/* About me */}
           <div className="panel">
             <GridBackground>
               <StickyScrollReveal />
@@ -140,7 +142,7 @@ export default function Page() {
           <BackgroundBoxes>
             <div className="container mx-auto">
               <div
-                className="flex flex-wrap px-4 sm:px-8 relative z-30 panel"
+                className="flex flex-wrap px-4 sm:px-8 relative z-30"
                 style={{ minHeight: "100vh" }}
               >
                 {/* Heading Section */}
@@ -178,6 +180,9 @@ export default function Page() {
             </div>
           </BackgroundBoxes>
         </main>
+        <footer className="panel">
+          <Footer/>
+        </footer>
       </div>
     </>
   );
