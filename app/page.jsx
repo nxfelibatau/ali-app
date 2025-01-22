@@ -54,6 +54,20 @@ export default function Page() {
     { id: "French", value: 10 },
   ];
 
+  const capabilities = [
+    { title: "Machine Learning" },
+    { title: "Data Analysis" },
+    { title: "Deep Learning" },
+    { title: "Reinforcement Learning" },
+    { title: "Image Processing" },
+    { title: "Natural Language Processing" },
+  ];
+  const languages = [
+    { title: "Germany" },
+    { title: "English" },
+    { title: "French" },
+  ];
+
   return (
     <>
       {/* Floating Navigation Bar */}
@@ -115,6 +129,7 @@ export default function Page() {
                   dir="ltr"
                   heading="What I'm capable of?"
                   data={chartData1}
+                  data2={capabilities}
                 />
               </div>
             </GridBackground>
@@ -128,6 +143,7 @@ export default function Page() {
                   dir="rtl"
                   heading="My Language Skills"
                   data={chartData2}
+                  data2={languages}
                 />
               </div>
             </GridBackground>
@@ -181,7 +197,7 @@ export default function Page() {
           </BackgroundBoxes>
         </main>
         <footer className="panel">
-          <Footer/>
+          <Footer />
         </footer>
       </div>
     </>

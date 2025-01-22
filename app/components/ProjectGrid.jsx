@@ -3,7 +3,24 @@ import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 import React from "react";
 import FloatingDock from "./FloatingDock";
-import { ExpandableCardDemo } from "./ExpandableCards";
+// import { ExpandableCardDemo } from "./ExpandableCards";
+import { Accordion, AccordionItem } from "@heroui/react";
+
+const AccordionDemo = ({ data2 }) => {
+  return (
+    <Accordion selectionMode="multiple">
+      {data2.map((item, index) => (
+        <AccordionItem
+          key={index}
+          aria-label={`Accordion ${index + 1}`}
+          title={item.title}
+        >
+          {item.title}
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+};
 
 const MyChart = ({ data }) => {
   // Accept 'data' prop here
@@ -77,7 +94,7 @@ const MyChart = ({ data }) => {
   return <svg ref={svgRef}></svg>;
 };
 
-const ProjecrGrid = ({ dir = "ltr", heading, data }) => {
+const ProjecrGrid = ({ dir = "ltr", heading, data, data2 }) => {
   return (
     <div
       dir={dir}
@@ -94,8 +111,8 @@ const ProjecrGrid = ({ dir = "ltr", heading, data }) => {
       </div>
 
       {/* Scrollable Section */}
-      <div className="md:w-1/2 w-full overflow-y-auto p-8 space-y-8">
-        <ExpandableCardDemo />
+      <div className="md:w-1/2 w-full overflow-y-auto flex flex-col justify-center items-center p-8 space-y-8">
+        <AccordionDemo data2={data2} />
         <div className="flex flex-row gap-5 mt-20 justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
           <FloatingDock />
         </div>
