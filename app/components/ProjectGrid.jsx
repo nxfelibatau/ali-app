@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import React from "react";
 import FloatingDock from "./FloatingDock";
 import { Accordion, AccordionItem } from "@heroui/react";
+import Image from "next/image";
 
 const AccordionDemo = ({ data2 }) => {
   return (
@@ -14,7 +15,18 @@ const AccordionDemo = ({ data2 }) => {
           aria-label={`Accordion ${index + 1}`}
           title={item.title}
         >
-          {item.description}
+          <div className="gradient p-5 rounded-md">
+            <div className="flex flex-col items-center">
+              <Image
+                src={item.URL}
+                className=""
+                alt="Image"
+                width={100}
+                height={100}
+              ></Image>
+              <div className="flex text-center">{item.description}</div>
+            </div>
+          </div>
         </AccordionItem>
       ))}
     </Accordion>
@@ -93,7 +105,7 @@ const MyChart = ({ data }) => {
   return <svg ref={svgRef}></svg>;
 };
 
-const ProjecrGrid = ({ dir = "ltr", heading, data, data2 }) => {
+const ProjecrGrid = ({ dir, heading, data, data2 }) => {
   return (
     <div
       dir={dir}
