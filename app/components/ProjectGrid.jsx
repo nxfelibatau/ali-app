@@ -7,14 +7,14 @@ import { Accordion, AccordionItem } from "@heroui/react";
 
 const AccordionDemo = ({ data2 }) => {
   return (
-    <Accordion selectionMode="multiple">
+    <Accordion selectionMode="single">
       {data2.map((item, index) => (
         <AccordionItem
           key={index}
           aria-label={`Accordion ${index + 1}`}
           title={item.title}
         >
-          {item.title}
+          {item.description}
         </AccordionItem>
       ))}
     </Accordion>

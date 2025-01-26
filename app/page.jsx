@@ -55,17 +55,53 @@ export default function Page() {
   ];
 
   const capabilities = [
-    { title: "Machine Learning" },
-    { title: "Data Analysis" },
-    { title: "Deep Learning" },
-    { title: "Reinforcement Learning" },
-    { title: "Image Processing" },
-    { title: "Natural Language Processing" },
+    {
+      title: "Machine Learning",
+      description:
+        "Machine learning is a branch of artificial intelligence that focuses on developing algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data. ",
+    },
+    {
+      title: "Data Analysis",
+      description:
+        "Data analysis is the process of inspecting, cleansing, transforming, and modeling data to uncover useful information, conclusions, and insights.",
+    },
+    {
+      title: "Deep Learning",
+      description:
+        "Deep learning is a subset of machine learning that uses neural networks with many layers to learn complex patterns in large amounts of data.",
+    },
+    {
+      title: "Reinforcement Learning",
+      description:
+        "Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving rewards or punishments.",
+    },
+    {
+      title: "Image Processing",
+      description:
+        "Image processing is the analysis and manipulation of digital images to improve their quality or extract useful information. ",
+    },
+    {
+      title: "Natural Language Processing",
+      description:
+        "Natural language processing is a field of artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language.",
+    },
   ];
   const languages = [
-    { title: "Germany" },
-    { title: "English" },
-    { title: "French" },
+    {
+      title: "Germany",
+      description:
+        "I am proficient in Germany, both in speaking and writing. My knowledge of the German language has been acquired through formal education and practical experience. Being able to speak German allows me to communicate with German-speaking individuals and access information and resources in the language. My proficiency in German is an asset when working on projects related to machine learning, data analysis, deep learning, reinforcement learning, image processing, and natural language processing, as it enables me to engage with German-speaking communities and sources of knowledge.",
+    },
+    {
+      title: "English",
+      description:
+        "I have a strong command of the English language, both in spoken and written forms. I have honed my English skills through formal education, professional experience, and everyday communication. Being fluent in English allows me to effectively communicate with a global audience and access a vast array of resources and information in the language. My proficiency in English is particularly valuable when working on projects related to machine learning, data analysis, deep learning, reinforcement learning, image processing, and natural language processing, as these fields often require collaboration and communication in English.",
+    },
+    {
+      title: "Persian",
+      description:
+        "Persian is my native language, and I am fluent in both spoken and written forms. Growing up in a Persian-speaking environment has allowed me to develop a deep understanding of the language and its nuances. I am comfortable communicating in Persian in various settings, whether it's casual conversations with friends and family or more formal interactions in academic or professional settings. My proficiency in Persian also enables me to access a wide range of resources and information in the language, enhancing my ability to work on projects related to machine learning, data analysis, deep learning, reinforcement learning, image processing, and natural language processing within a Persian-speaking context.",
+    },
   ];
 
   return (
@@ -138,7 +174,7 @@ export default function Page() {
           {/* Second ProjecrGrid Instance */}
           <section className="panel">
             <GridBackground>
-              <div className="container mx-auto px-4 sm:px-8 mt-16">
+              <div className="container mx-auto px-4 sm:px-8 mt-16 mb-26">
                 <ProjectGrid
                   dir="rtl"
                   heading="My Language Skills"
