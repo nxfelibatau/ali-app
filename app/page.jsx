@@ -132,14 +132,14 @@ export default function Page() {
                 style={{ minHeight: "100vh" }}
               >
                 {/* Heading Section */}
-                <div className="w-1/2 flex items-center text-center">
+                <div className="md:w-1/2 w-full flex items-center justify-center md:justify-start text-center">
                   <p className="text-silk text-4xl md:text-5xl">
                     Data to <span className="font-bold">Insights</span>
                   </p>
                 </div>
 
                 {/* Paragraph Section */}
-                <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
+                <div className="md:w-1/2 w-full flex flex-col justify-center text-center max-w-2xl">
                   <p className="text-silk font-semibold text-base xl:text-xl">
                     <strong>Thank you for visiting my portfolio</strong> — a
                     showcase of transforming data into actionable insights. As a
@@ -152,7 +152,7 @@ export default function Page() {
                     mathematical and AI models, ensuring transparency and
                     precision.
                   </p>
-                  <p className="text-silk font-semibold text-base xl:text-xl">
+                  <p className="text-silk hidden md:block font-semibold text-base xl:text-xl">
                     Here, I bring technical rigor and a passion for uncovering
                     insights to help your data tell impactful stories.
                   </p>
@@ -207,14 +207,14 @@ export default function Page() {
                 style={{ minHeight: "100vh" }}
               >
                 {/* Heading Section */}
-                <div className="w-1/2 flex items-center text-center">
+                <div className="md:w-1/2 w-full flex items-center justify-center md:justify-start text-center">
                   <p className="text-navy text-4xl md:text-5xl">
                     From <span className="font-bold">Insight</span> to action
                   </p>
                 </div>
 
                 {/* Paragraph Section */}
-                <div className="w-1/2 flex flex-col justify-center text-center max-w-2xl">
+                <div className="md:w-1/2 w-full flex flex-col justify-center text-center max-w-2xl">
                   <p className="text-navy font-semibold text-base xl:text-xl">
                     This is where data's true value is realized. The isights
                     derived from thoughtful analysis are more than just
@@ -226,7 +226,7 @@ export default function Page() {
                     insights become the foundation for impactful decisions,
                     guiding projects and companies toward measurable success.
                   </p>
-                  <p className="text-navy font-semibold text-base xl:text-xl">
+                  <p className="text-navy hidden md:block font-semibold text-base xl:text-xl">
                     I invite you to explore the examples and case studies
                     throughout my portfolio, showcasing how data-driven insights
                     have been transformed into actions that make a difference.
