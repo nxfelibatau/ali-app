@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { cn } from "../lib/utils";
 import Link from "next/link";
+import AnimatedModal from "../AnimatedModal";
 
 export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
@@ -46,7 +47,7 @@ export const FloatingNav = ({ navItems, className }) => {
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-silk shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-grass shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
           className
         )}
       >
@@ -63,7 +64,7 @@ export const FloatingNav = ({ navItems, className }) => {
           </Link>
         ))}
         <button className="border text-sm font-medium relative border-neutral-200 hover:bg-navy dark:border-white/[0.2] text-black hover:text-silk dark:text-white px-4 py-2 rounded-full">
-          <span>Let's talk</span>
+        <AnimatedModal/>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-navy to-transparent  h-px" />
         </button>
       </motion.div>

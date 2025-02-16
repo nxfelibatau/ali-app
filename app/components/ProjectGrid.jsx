@@ -38,7 +38,7 @@ const MyChart = ({ data }) => {
     const total = d3.sum(data, (d) => d.value);
 
     const format = d3.format(",d");
-    const color = "#0AB8B7";
+    const color = "#8DECB4";
 
     const pack = d3
       .pack()
