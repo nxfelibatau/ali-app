@@ -17,13 +17,6 @@ const AccordionDemo = ({ data2 }) => {
         >
           <div className="gradient p-5 rounded-md">
             <div className="flex flex-col items-center">
-              <Image
-                src={item.URL}
-                className=""
-                alt="Image"
-                width={100}
-                height={100}
-              ></Image>
               <div className="flex text-center">{item.description}</div>
             </div>
           </div>
@@ -45,7 +38,7 @@ const MyChart = ({ data }) => {
     const total = d3.sum(data, (d) => d.value);
 
     const format = d3.format(",d");
-    const color = d3.scaleOrdinal(d3.schemeTableau10);
+    const color = "#0AB8B7";
 
     const pack = d3
       .pack()
@@ -76,7 +69,7 @@ const MyChart = ({ data }) => {
     node
       .append("circle")
       .attr("fill-opacity", 0.7)
-      .attr("fill", (d) => color(d.data.id))
+      .attr("fill", color)
       .attr("r", (d) => d.r);
 
     // Labels

@@ -23,8 +23,8 @@ export default function Page() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: panel,
-          start: index === 0 ? "top top" : "bottom bottom",
-          end: "50%+=100% top",
+          start: index === 0 ? "top top" : "bottom 30%+=100%",
+          end: index === 0 ? "10%+=100% top" : "50%+=100% top",
           pinSpacing: index === 0 ? true : false,
           pin: true,
           scrub: true,
@@ -34,7 +34,7 @@ export default function Page() {
       tl.fromTo(
         panel,
         { y: 0, rotate: 0, scale: 1, opacity: 1 },
-        { y: 0, rotateX: 0, scale: 1, opacity: 0.5 }
+        { y: 0, rotateX: 0, scale:1, opacity: 0.5 }
       ).to(panel, { opacity: 0 }, 0.1);
     });
   }, []);
@@ -169,7 +169,7 @@ export default function Page() {
           {/* First ProjecrGrid Instance */}
           <GridBackground>
             <section className="panel">
-              <div className="container mx-auto px-4 sm:px-8 mt-16">
+              <div className="container mx-auto px-4 sm:px-8">
                 <ProjectGrid
                   dir="ltr"
                   heading="What I'm capable of?"
@@ -183,7 +183,7 @@ export default function Page() {
           {/* Second ProjecrGrid Instance */}
           <GridBackground>
             <section className="panel">
-              <div className="container mx-auto px-4 sm:px-8 mt-16 mb-26">
+              <div className="container mx-auto px-4 sm:px-8 mb-26">
                 <ProjectGrid
                   dir="rtl"
                   heading="My Language Skills"
