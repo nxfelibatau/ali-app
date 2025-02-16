@@ -24,7 +24,7 @@ export default function Page() {
         scrollTrigger: {
           trigger: panel,
           start: index === 0 ? "top top" : "bottom bottom",
-          end: "70%+=100% top",
+          end: "50%+=100% top",
           pinSpacing: index === 0 ? true : false,
           pin: true,
           scrub: true,
@@ -167,8 +167,8 @@ export default function Page() {
           </BackgroundBoxes>
 
           {/* First ProjecrGrid Instance */}
-          <section className="panel">
-            <GridBackground>
+          <GridBackground>
+            <section className="panel">
               <div className="container mx-auto px-4 sm:px-8 mt-16">
                 <ProjectGrid
                   dir="ltr"
@@ -177,12 +177,12 @@ export default function Page() {
                   data2={capabilities}
                 />
               </div>
-            </GridBackground>
-          </section>
+            </section>
+          </GridBackground>
 
           {/* Second ProjecrGrid Instance */}
-          <section className="panel">
-            <GridBackground>
+          <GridBackground>
+            <section className="panel">
               <div className="container mx-auto px-4 sm:px-8 mt-16 mb-26">
                 <ProjectGrid
                   dir="rtl"
@@ -191,14 +191,14 @@ export default function Page() {
                   data2={languages}
                 />
               </div>
-            </GridBackground>
-          </section>
+            </section>
+          </GridBackground>
           {/* About me */}
-          <div className="panel">
-            <GridBackground>
+          <GridBackground>
+            <div className="panel">
               <StickyScrollReveal />
-            </GridBackground>
-          </div>
+            </div>
+          </GridBackground>
           {/* Secondary Section */}
           <BackgroundBoxes>
             <div className="container mx-auto">

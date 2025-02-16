@@ -1,8 +1,10 @@
 import { HoverEffect } from "../components/ui/card-hover-effect";
+import Header from "../components/Header";
 
 export default function Courses() {
   return (
     (<div className="max-w-5xl mx-auto px-8">
+      <Header/>
       <HoverEffect items={projects} />
     </div>)
   );
