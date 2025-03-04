@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import React from "react";
 import FloatingDock from "./FloatingDock";
 import { Accordion, AccordionItem } from "@heroui/react";
-import Image from "next/image";
 
 const AccordionDemo = ({ data2 }) => {
   return (
@@ -38,7 +37,7 @@ const MyChart = ({ data }) => {
     const total = d3.sum(data, (d) => d.value);
 
     const format = d3.format(",d");
-    const color = "#8DECB4";
+    const color = "#00879E";
 
     const pack = d3
       .pack()
@@ -76,7 +75,7 @@ const MyChart = ({ data }) => {
     node
       .append("text")
       .style("fill", "white")
-      .style("font-size", "20px")
+      .style("font-size", "30px")
       .style("pointer-events", "none")
       .selectAll("tspan")
       .data((d) => d.data.id.split(" "))
@@ -89,7 +88,7 @@ const MyChart = ({ data }) => {
     node
       .append("text")
       .style("fill", "white")
-      .style("font-size", "20px")
+      .style("font-size", "30px")
       .style("font-weight", "bold")
       .attr("dy", "1.85em")
       .text((d) => `${((d.data.value / total) * 100).toFixed(1)}%`);
@@ -117,7 +116,7 @@ const ProjecrGrid = ({ dir, heading, data, data2 }) => {
       {/* Scrollable Section */}
       <div className="md:w-1/2 w-full overflow-y-auto flex flex-col justify-center items-center p-8 space-y-8">
         <AccordionDemo data2={data2} />
-        <div className="flex flex-row gap-5 mt-20 justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
+        <div className="md:flex md:flex-row hidden gap-5 mt-20 justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
           <FloatingDock />
         </div>
       </div>
