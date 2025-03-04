@@ -34,7 +34,7 @@ export default function Page() {
       tl.fromTo(
         panel,
         { y: 0, rotate: 0, scale: 1, opacity: 1 },
-        { y: 0, rotateX: 0, scale:1, opacity: 0.5 }
+        { y: 0, rotateX: 0, scale: 1, opacity: 0.5 }
       ).to(panel, { opacity: 0 }, 0.1);
     });
   }, []);
@@ -96,19 +96,19 @@ export default function Page() {
     {
       title: "Germany",
       description:
-        "I am proficient in Germany, both in speaking and writing. My knowledge of the German language has been acquired through formal education and practical experience. Being able to speak German allows me to communicate with German-speaking individuals and access information and resources in the language. My proficiency in German is an asset when working on projects related to machine learning, data analysis, deep learning, reinforcement learning, image processing, and natural language processing, as it enables me to engage with German-speaking communities and sources of knowledge.",
+        "I am proficient in Germany, both in speaking and writing. My knowledge of the German language has been acquired through formal education and practical experience.",
       URL: "/images/machineLearning.jpg",
     },
     {
       title: "English",
       description:
-        "I have a strong command of the English language, both in spoken and written forms. I have honed my English skills through formal education, professional experience, and everyday communication. Being fluent in English allows me to effectively communicate with a global audience and access a vast array of resources and information in the language. My proficiency in English is particularly valuable when working on projects related to machine learning, data analysis, deep learning, reinforcement learning, image processing, and natural language processing, as these fields often require collaboration and communication in English.",
+        "I have a strong command of the English language, both in spoken and written forms. I have honed my English skills through formal education, professional experience, and everyday communication.",
       URL: "/images/machineLearning.jpg",
     },
     {
       title: "Persian",
       description:
-        "Persian is my native language, and I am fluent in both spoken and written forms. Growing up in a Persian-speaking environment has allowed me to develop a deep understanding of the language and its nuances. I am comfortable communicating in Persian in various settings, whether it's casual conversations with friends and family or more formal interactions in academic or professional settings. My proficiency in Persian also enables me to access a wide range of resources and information in the language, enhancing my ability to work on projects related to machine learning, data analysis, deep learning, reinforcement learning, image processing, and natural language processing within a Persian-speaking context.",
+        "Persian is my native language, and I am fluent in both spoken and written forms. Growing up in a Persian-speaking environment has allowed me to develop a deep understanding of the language and its nuances.",
       URL: "/images/machineLearning.jpg",
     },
   ];
