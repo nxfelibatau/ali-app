@@ -54,10 +54,9 @@ export default function Header() {
             </ul>
           </div>
           <div className="flex space-x-3 rtl:space-x-reverse">
-            <button
-              type="button"
+            <Link href='/another'
               className="text-white text-sm bx bx-globe hover:text-gray-400 focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-lg md:px-4 py-2 text-center bg-transparent"
-            ></button>
+            ></Link>
             <div className="text-white bg-transparent hover:bg-gray-700 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm text-center">
               <AnimatedModal />
             </div>
