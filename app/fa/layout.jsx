@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="fa">
       <body>
         <Header {...headerData} />
         {children}
