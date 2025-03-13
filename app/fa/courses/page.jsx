@@ -1,5 +1,5 @@
-import { HoverEffect } from "../components/ui/card-hover-effect";
-import Header from "../components/Header";
+import { HoverEffect } from "../../components/ui/card-hover-effect";
+import Header from "../../components/Header";
 
 export default function Courses() {
   return (

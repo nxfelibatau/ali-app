@@ -3,13 +3,12 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Header from "./components/Header";
-import ProjectGrid from "./components/ProjectGrid"; // Ensure this import is correct
-import BackgroundBoxes from "./components/BackgroundBoxes";
-import FloatingNavbar from "./components/FloatingNavbar";
-import GridBackground from "./components/GridBackground";
-import StickyScrollReveal from "./components/StickyScrollReveal";
-import Footer from "./components/Footer";
+import ProjectGrid from "../components/ProjectGrid"; // Ensure this import is correct
+import BackgroundBoxes from "../components/BackgroundBoxes";
+import FloatingNavbar from "../components/FloatingNavbar";
+import GridBackground from "../components/GridBackground";
+import StickyScrollReveal from "../components/StickyScrollReveal";
+import Footer from "../components/Footer";
 
 export default function Page() {
   useEffect(() => {
@@ -120,9 +119,6 @@ export default function Page() {
 
       {/* Main Wrapper */}
       <div className="relative w-full h-full">
-        <header>
-          <Header />
-        </header>
         <main>
           {/* First Section with Background Boxes */}
           <BackgroundBoxes>
