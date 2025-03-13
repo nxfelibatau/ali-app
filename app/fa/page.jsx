@@ -48,66 +48,66 @@ export default function Page() {
   ];
 
   const chartData2 = [
-    { id: "English", value: 40 },
-    { id: "Germany", value: 30 },
-    { id: "French", value: 10 },
+    { id: "انگلیسی", value: 40 },
+    { id: "آلمانی", value: 30 },
+    { id: "فرانسوی", value: 10 },
   ];
 
   const capabilities = [
     {
-      title: "Machine Learning",
+      title: "یادگیری ماشین",
       description:
-        "Machine learning is a branch of artificial intelligence that focuses on developing algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data. ",
+        "یادگیری ماشین شاخه‌ای از هوش مصنوعی است که بر توسعه الگوریتم‌ها و مدل‌های آماری تمرکز دارد که به کامپیوترها این امکان را می‌دهد که از داده‌ها یاد بگیرند و پیش‌بینی‌ها یا تصمیمات بر اساس داده‌ها بگیرند.",
       URL: "/images/machineLearning.jpg",
     },
     {
-      title: "Data Analysis",
+      title: "تحلیل داده‌ها",
       description:
-        "Data analysis is the process of inspecting, cleansing, transforming, and modeling data to uncover useful information, conclusions, and insights.",
+        "تحلیل داده‌ها فرآیند بازرسی، تمیز کردن، تبدیل و مدل‌سازی داده‌ها است تا اطلاعات مفید، نتیجه‌گیری‌ها و بینش‌ها را کشف کنیم.",
       URL: "/images/dataAnalysis.jpg",
     },
     {
-      title: "Deep Learning",
+      title: "یادگیری عمیق",
       description:
-        "Deep learning is a subset of machine learning that uses neural networks with many layers to learn complex patterns in large amounts of data.",
+        "یادگیری عمیق زیرمجموعه‌ای از یادگیری ماشین است که از شبکه‌های عصبی با لایه‌های متعدد برای یادگیری الگوهای پیچیده در مقادیر زیاد داده استفاده می‌کند.",
       URL: "/images/deepLearning.jpg",
     },
     {
-      title: "Reinforcement Learning",
+      title: "یادگیری تقویتی",
       description:
-        "Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving rewards or punishments.",
+        "یادگیری تقویتی نوعی از یادگیری ماشین است که در آن یک عامل از طریق تعامل با محیط و دریافت پاداش یا تنبیه، یاد می‌گیرد که چه تصمیماتی بگیرد.",
       URL: "/images/reinforecmentLearning.png",
     },
     {
-      title: "Image Processing",
+      title: "پردازش تصویر",
       description:
-        "Image processing is the analysis and manipulation of digital images to improve their quality or extract useful information. ",
+        "پردازش تصویر تجزیه و تحلیل و دستکاری تصاویر دیجیتال به منظور بهبود کیفیت آنها یا استخراج اطلاعات مفید است.",
       URL: "/images/imageProcessing.jpg",
     },
     {
-      title: "Natural Language Processing",
+      title: "پردازش زبان طبیعی",
       description:
-        "Natural language processing is a field of artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language.",
+        "پردازش زبان طبیعی شاخه‌ای از هوش مصنوعی است که به کامپیوترها این امکان را می‌دهد تا زبان انسان را درک، تفسیر و تولید کنند.",
       URL: "/images/NLP.webp",
     },
   ];
   const languages = [
     {
-      title: "Germany",
+      title: "آلمانی",
       description:
-        "I am proficient in Germany, both in speaking and writing. My knowledge of the German language has been acquired through formal education and practical experience.",
+        "من در زبان آلمانی مهارت دارم، هم در صحبت کردن و هم در نوشتن. دانش من از زبان آلمانی از طریق آموزش رسمی و تجربه عملی به دست آمده است.",
       URL: "/images/machineLearning.jpg",
     },
     {
-      title: "English",
+      title: "انگلیسی",
       description:
-        "I have a strong command of the English language, both in spoken and written forms. I have honed my English skills through formal education, professional experience, and everyday communication.",
+        "من تسلط بالایی به زبان انگلیسی دارم، هم در گفتار و هم در نوشتار. مهارت‌های من در زبان انگلیسی از طریق آموزش رسمی، تجربه حرفه‌ای و ارتباطات روزمره تقویت شده‌اند.",
       URL: "/images/machineLearning.jpg",
     },
     {
-      title: "Persian",
+      title: "فارسی",
       description:
-        "Persian is my native language, and I am fluent in both spoken and written forms. Growing up in a Persian-speaking environment has allowed me to develop a deep understanding of the language and its nuances.",
+        "زبان فارسی زبان مادری من است و من در هر دو حالت گفتاری و نوشتاری مسلط هستم. بزرگ شدن در محیطی فارسی‌زبان به من این امکان را داده است که درک عمیقی از زبان و ظرایف آن پیدا کنم.",
       URL: "/images/machineLearning.jpg",
     },
   ];
@@ -130,27 +130,20 @@ export default function Page() {
                 {/* Heading Section */}
                 <div className="md:w-1/2 w-full flex items-center justify-center md:justify-start text-center">
                   <p className="text-silk text-4xl md:text-5xl">
-                    Data to <span className="font-bold">Insights</span>
+                    از داده‌ها به <span className="font-bold">بینش‌ها</span>
                   </p>
                 </div>
 
                 {/* Paragraph Section */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center text-center max-w-2xl">
                   <p className="text-silk font-semibold text-base xl:text-xl">
-                    <strong>Thank you for visiting my portfolio</strong> — a
-                    showcase of transforming data into actionable insights. As a
-                    data scientist and machine learning specialist, I am
-                    committed to turning complex datasets into clear, strategic
-                    guidance.
+                    <strong className="text-2xl">از اینکه به پرتفولیوی من سر زدید سپاسگزارم</strong> — نمایشی از تبدیل داده‌ها به بینش‌های قابل اجرا. به عنوان یک دانشمند داده و متخصص یادگیری ماشین، من متعهد هستم که داده‌های پیچیده را به راهنمایی‌های استراتژیک و روشن تبدیل کنم.
                   </p>
                   <p className="text-silk font-semibold text-base xl:text-xl">
-                    My approach blends data exploration with customized
-                    mathematical and AI models, ensuring transparency and
-                    precision.
+                    رویکرد من ترکیبی از کاوش در داده‌ها با مدل‌های ریاضی و هوش مصنوعی سفارشی است تا شفافیت و دقت را تضمین کند.
                   </p>
                   <p className="text-silk hidden md:block font-semibold text-base xl:text-xl">
-                    Here, I bring technical rigor and a passion for uncovering
-                    insights to help your data tell impactful stories.
+                    در اینجا، من سخت‌کوشی فنی و اشتیاق برای کشف بینش‌ها را به کار می‌برم تا به داده‌ها کمک کنم داستان‌های تاثیرگذاری بگویند.
                   </p>
                 </div>
 
@@ -168,7 +161,7 @@ export default function Page() {
               <div className="container mx-auto px-4 sm:px-8">
                 <ProjectGrid
                   dir="ltr"
-                  heading="What I'm capable of?"
+                  heading="توانایی‌های من"
                   data={chartData1}
                   data2={capabilities}
                 />
@@ -182,7 +175,7 @@ export default function Page() {
               <div className="container mx-auto px-4 sm:px-8 mb-26">
                 <ProjectGrid
                   dir="rtl"
-                  heading="My Language Skills"
+                  heading="مهارت‌های زبانی من"
                   data={chartData2}
                   data2={languages}
                 />
@@ -205,27 +198,20 @@ export default function Page() {
                 {/* Heading Section */}
                 <div className="md:w-1/2 w-full flex items-center justify-center md:justify-start text-center">
                   <p className="text-navy text-4xl md:text-5xl">
-                    From <span className="font-bold">Insight</span> to action
+                    از <span className="font-bold">بینش</span> به عمل
                   </p>
                 </div>
 
                 {/* Paragraph Section */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center text-center max-w-2xl">
                   <p className="text-navy font-semibold text-base xl:text-xl">
-                    This is where data's true value is realized. The isights
-                    derived from thoughtful analysis are more than just
-                    knowledge; they are powerful tools for driving growth,
-                    optimizing procrsses, and uncovering new opportunities.
+                    اینجا جایی است که ارزش واقعی داده‌ها درک می‌شود. بینش‌هایی که از تحلیل‌های دقیق به دست می‌آید، بیشتر از دانشی صرف هستند؛ آنها ابزارهای قدرتمندی برای پیشبرد رشد، بهینه‌سازی فرآیندها و کشف فرصت‌های جدید هستند.
                   </p>
                   <p className="text-navy font-semibold text-base xl:text-xl">
-                    With the right models and a strategic approach, these
-                    insights become the foundation for impactful decisions,
-                    guiding projects and companies toward measurable success.
+                    با مدل‌های درست و یک رویکرد استراتژیک، این بینش‌ها تبدیل به اساس تصمیمات تاثیرگذار می‌شوند که پروژه‌ها و شرکت‌ها را به سوی موفقیت‌های قابل اندازه‌گیری هدایت می‌کنند.
                   </p>
                   <p className="text-navy hidden md:block font-semibold text-base xl:text-xl">
-                    I invite you to explore the examples and case studies
-                    throughout my portfolio, showcasing how data-driven insights
-                    have been transformed into actions that make a difference.
+                    من از شما دعوت می‌کنم تا نمونه‌ها و مطالعات موردی در سراسر پرتفولیوی من را بررسی کنید، که نحوه تبدیل بینش‌های داده‌محور به اقداماتی را که تفاوت ایجاد کرده‌اند نشان می‌دهند.
                   </p>
                 </div>
 

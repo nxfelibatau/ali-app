@@ -1,20 +1,16 @@
 "use client";
+
 import React from "react";
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalTrigger,
-} from "./ui/animated-modal";
+import { Modal, ModalBody, ModalContent, ModalTrigger } from "./ui/animated-modal";
 import SignupForm from "./SignupForm";
 
-export default function AnimatedModalDemo() {
+export default function AnimatedModal({ buttonText = "Let's talk?" }) {
   return (
     <div className="flex items-center justify-center">
       <Modal>
-        <ModalTrigger className=" dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+        <ModalTrigger className="dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-            Let's talk
+            {buttonText} {/* Display the button text */}
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
             Ali GH <i className="bx bx-arrow-from-left"></i>
@@ -22,7 +18,7 @@ export default function AnimatedModalDemo() {
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
-            <SignupForm/>
+            <SignupForm />
           </ModalContent>
         </ModalBody>
       </Modal>

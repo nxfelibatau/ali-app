@@ -4,8 +4,27 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedModal from "./AnimatedModal";
+import { usePathname } from "next/navigation"; // Use usePathname to get the current URL path
 
 export default function Header({ logoAlt = "Logo", navLinks = [] }) {
+  const pathname = usePathname(); // Get the current pathname from the URL
+
+  // Extract the language from the URL (e.g. /en or /fa)
+  const locale = pathname?.split('/')[1] || 'en'; // Default to 'en' if locale is not found in the URL
+
+  // Define modal texts for different languages
+  const modalData = {
+    modalTexts: [
+      {
+        en: "Let's talk?",  // English text
+        fa: "صحبت کنیم؟",  // Farsi text
+      },
+    ],
+  };
+
+  // Get the text based on the current language (locale)
+  const modalText = modalData.modalTexts[0][locale] || modalData.modalTexts[0].en; // Default to English if the locale is not found
+
   return (
     <div className="container mx-auto">
       <nav className="w-full z-20 top-0 start-0 border-b border-gray-200">
@@ -37,7 +56,8 @@ export default function Header({ logoAlt = "Logo", navLinks = [] }) {
               className="text-white text-sm bx bx-globe hover:text-gray-400 focus:ring-4 focus:outline-none font-medium rounded-lg md:text-lg md:px-4 py-2 text-center bg-transparent"
             ></Link>
             <div className="text-white bg-transparent hover:bg-gray-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm text-center">
-              <AnimatedModal />
+              {/* Passing the correct modal text based on locale */}
+              <AnimatedModal buttonText={modalText} />
             </div>
           </div>
         </div>
