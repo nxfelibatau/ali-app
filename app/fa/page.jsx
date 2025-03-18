@@ -185,7 +185,7 @@ export default function Page() {
           {/* About me */}
           <GridBackground>
             <div className="panel">
-              <StickyScrollReveal />
+            <StickyScrollReveal lang="fa" />
             </div>
           </GridBackground>
           {/* Secondary Section */}
