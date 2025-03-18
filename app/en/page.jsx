@@ -115,7 +115,7 @@ export default function Page() {
   return (
     <>
       {/* Floating Navigation Bar */}
-      <FloatingNavbar />
+      <FloatingNavbar locale="en"/>
 
       {/* Main Wrapper */}
       <div className="relative w-full h-full">

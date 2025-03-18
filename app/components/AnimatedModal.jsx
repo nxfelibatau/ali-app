@@ -7,7 +7,7 @@ export default function AnimatedModal({ buttonText = "Let's talk?", lang = "en" 
   return (
     <div className="flex items-center justify-center">
       <Modal>
-        <ModalTrigger className=" text-white hover:bg-slate-950 hover:cursor-pointer flex justify-center group/modal-btn">
+        <ModalTrigger className=" text-white hover:bg-gray-950 hover:cursor-pointer flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             {buttonText}
           </span>
