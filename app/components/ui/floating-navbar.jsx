@@ -71,7 +71,7 @@ export const FloatingNav = ({ navItems, className }) => {
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 hover:bg-gray-950 text-black hover:text-silk px-4 py-2 rounded-full">
+        <button className=" text-sm font-medium relative  hover:bg-gray-950 text-black hover:text-silk px-4 py-2 rounded-full">
           <AnimatedModal buttonText={modalTexts[locale]} lang={locale} />{" "}
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-navy to-transparent  h-px" />
         </button>

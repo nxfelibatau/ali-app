@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedModal from "./AnimatedModal";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header({ logoAlt = "Logo", navLinks = [] }) {
   const pathname = usePathname();
@@ -46,6 +47,7 @@ export default function Header({ logoAlt = "Logo", navLinks = [] }) {
             </ul>
           </div>
           <div className="flex space-x-3 rtl:space-x-reverse">
+          <LanguageSwitcher/>
             <AnimatedModal buttonText={modalTexts[locale]} lang={locale} />
           </div>
         </div>
