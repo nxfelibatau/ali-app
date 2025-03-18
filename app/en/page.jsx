@@ -238,7 +238,7 @@ export default function Page() {
           </BackgroundBoxes>
         </main>
         <footer className="panel">
-          <Footer />
+          <Footer lang="en"/>
         </footer>
       </div>
     </>
