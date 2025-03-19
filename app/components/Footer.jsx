@@ -18,6 +18,13 @@ export default function Footer({ lang = "en" }) {
     },
   }), []);
 
+  const getLinkPath = (path) => {
+    if (path === "home") {
+      return lang === "en" ? "/en" : "/fa";  // For home, link to /en or /fa
+    }
+    return lang === "en" ? `/en/${path}` : `/fa/${path}`;
+  };
+
   return (
     <footer>
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
@@ -38,7 +45,7 @@ export default function Footer({ lang = "en" }) {
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           {['home', 'courses', 'projects'].map((key) => (
             <li key={key}>
-              <Link className="text-gray-700 hover:text-gray-700/75" href="#">
+              <Link className="text-gray-700 hover:text-gray-700/75" href={getLinkPath(key)}>
                 {text[lang]?.[key]}
               </Link>
             </li>
