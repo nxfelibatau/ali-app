@@ -1,4 +1,4 @@
-"use client"; // این خط برای کامپوننت‌های کلاینت ساید در app ضروریه
+"use client";
 
 import { usePathname, useRouter } from "next/navigation";
 

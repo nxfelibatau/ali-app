@@ -1,13 +1,5 @@
 import { HoverEffect } from "../../components/ui/card-hover-effect";
-import Header from "../../components/Header";
 
-export default function Courses() {
-  return (
-    (<div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={projects} />
-    </div>)
-  );
-}
 export const projects = [
   {
     title: "Stripe",
@@ -46,3 +38,11 @@ export const projects = [
     link: "https://microsoft.com",
   },
 ];
+
+export default function Projects() {
+  return (
+    <div className="max-w-5xl mx-auto px-8">
+      <HoverEffect items={projects} />
+    </div>
+  );
+}

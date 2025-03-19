@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "./lib/utils";
@@ -47,31 +47,34 @@ export default function SignupFormDemo({ lang = "en" }) {
     projectRequest: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleChange = useCallback((e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
 
-    const templateParams = {
-      to_email: "yashooshmand@gmail.com",
-      from_email: formData.email,
-      first_name: formData.firstName,
-      last_name: formData.lastName,
-      project_request: formData.projectRequest,
-    };
+      const templateParams = {
+        to_email: "yashooshmand@gmail.com",
+        from_email: formData.email,
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        project_request: formData.projectRequest,
+      };
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => alert("Email sent successfully!"))
-      .catch((error) => alert("Error sending email: " + error.text));
-  };
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          templateParams,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        )
+        .then(() => alert("Email sent successfully!"))
+        .catch((error) => alert("Error sending email: " + error.text));
+    },
+    [formData]
+  );
 
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">

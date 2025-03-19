@@ -1,18 +1,17 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ProjectGrid from "../components/ProjectGrid"; // Ensure this import is correct
+import ProjectGrid from "../components/ProjectGrid";
 import BackgroundBoxes from "../components/BackgroundBoxes";
 import FloatingNavbar from "../components/FloatingNavbar";
 import GridBackground from "../components/GridBackground";
 import StickyScrollReveal from "../components/StickyScrollReveal";
 import Footer from "../components/Footer";
 
-export default function Page() {
+const Page = () => {
   useEffect(() => {
-    // Register GSAP ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
     const panels = gsap.utils.toArray(".panel");
@@ -38,22 +37,23 @@ export default function Page() {
     });
   }, []);
 
-  const chartData1 = [
-    { id: "Machine Learning", value: 35 },
-    { id: "Data Analysis", value: 25 },
-    { id: "Deep Learning", value: 20 },
-    { id: "Reinforcement Learning", value: 10 },
-    { id: "Image Processing", value: 5 },
-    { id: "Natural Language Processing", value: 5 },
-  ];
+  // Memoizing data
+  const chartData1 = useMemo(() => [
+    { id: "یادگیری ماشین", value: 35 },
+    { id: "تحلیل داده‌ها", value: 25 },
+    { id: "یادگیری عمیق", value: 20 },
+    { id: "یادگیری تقویتی", value: 10 },
+    { id: "پردازش تصویر", value: 5 },
+    { id: "پردازش زبان طبیعی", value: 5 },
+  ], []);
 
-  const chartData2 = [
+  const chartData2 = useMemo(() => [
     { id: "انگلیسی", value: 40 },
     { id: "آلمانی", value: 30 },
     { id: "فرانسوی", value: 10 },
-  ];
+  ], []);
 
-  const capabilities = [
+  const capabilities = useMemo(() => [
     {
       title: "یادگیری ماشین",
       description:
@@ -90,8 +90,9 @@ export default function Page() {
         "پردازش زبان طبیعی شاخه‌ای از هوش مصنوعی است که به کامپیوترها این امکان را می‌دهد تا زبان انسان را درک، تفسیر و تولید کنند.",
       URL: "/images/NLP.webp",
     },
-  ];
-  const languages = [
+  ], []);
+
+  const languages = useMemo(() => [
     {
       title: "آلمانی",
       description:
@@ -110,12 +111,12 @@ export default function Page() {
         "زبان فارسی زبان مادری من است و من در هر دو حالت گفتاری و نوشتاری مسلط هستم. بزرگ شدن در محیطی فارسی‌زبان به من این امکان را داده است که درک عمیقی از زبان و ظرایف آن پیدا کنم.",
       URL: "/images/machineLearning.jpg",
     },
-  ];
+  ], []);
 
   return (
     <>
       {/* Floating Navigation Bar */}
-      <FloatingNavbar locale="fa"/>
+      <FloatingNavbar locale="fa" />
 
       {/* Main Wrapper */}
       <div className="relative w-full h-full">
@@ -182,12 +183,14 @@ export default function Page() {
               </div>
             </section>
           </GridBackground>
+
           {/* About me */}
           <GridBackground>
             <div className="panel">
-            <StickyScrollReveal lang="fa" />
+              <StickyScrollReveal lang="fa" />
             </div>
           </GridBackground>
+
           {/* Secondary Section */}
           <BackgroundBoxes>
             <div className="container mx-auto">
@@ -224,9 +227,11 @@ export default function Page() {
           </BackgroundBoxes>
         </main>
         <footer className="panel">
-          <Footer lang="fa"/>
+          <Footer lang="fa" />
         </footer>
       </div>
     </>
   );
-}
+};
+
+export default Page;

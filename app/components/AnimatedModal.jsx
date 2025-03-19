@@ -7,11 +7,11 @@ export default function AnimatedModal({ buttonText = "Let's talk?", lang = "en" 
   return (
     <div className="flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="border py-2 px-4 text-white hover:bg-gray-950 hover:cursor-pointer flex justify-center group/modal-btn">
-          <span className=" group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+        <ModalTrigger className="relative border py-2 px-4 text-white hover:bg-gray-950 hover:cursor-pointer flex justify-center group/modal-btn overflow-hidden">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition-transform duration-500">
             {buttonText}
           </span>
-          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 text-white z-20 translate-x-[-100%] group-hover/modal-btn:translate-x-0">
             Ali GH <i className="bx bx-arrow-from-left"></i>
           </div>
         </ModalTrigger>

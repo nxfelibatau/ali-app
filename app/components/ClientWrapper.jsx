@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect } from "react";
@@ -9,7 +8,9 @@ export default function ClientWrapper() {
   const locale = pathname.split("/")[1] || "en";
 
   useEffect(() => {
-    document.documentElement.lang = locale;
+    if (document.documentElement.lang !== locale) {
+      document.documentElement.lang = locale;
+    }
   }, [locale]);
 
   return null;

@@ -1,16 +1,16 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ProjectGrid from "../components/ProjectGrid"; // Ensure this import is correct
+import ProjectGrid from "../components/ProjectGrid";
 import BackgroundBoxes from "../components/BackgroundBoxes";
 import FloatingNavbar from "../components/FloatingNavbar";
 import GridBackground from "../components/GridBackground";
 import StickyScrollReveal from "../components/StickyScrollReveal";
 import Footer from "../components/Footer";
 
-export default function Page() {
+const Page = () => {
   useEffect(() => {
     // Register GSAP ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
@@ -38,84 +38,98 @@ export default function Page() {
     });
   }, []);
 
-  const chartData1 = [
-    { id: "Machine Learning", value: 35 },
-    { id: "Data Analysis", value: 25 },
-    { id: "Deep Learning", value: 20 },
-    { id: "Reinforcement Learning", value: 10 },
-    { id: "Image Processing", value: 5 },
-    { id: "Natural Language Processing", value: 5 },
-  ];
+  // Memoize chart data and capabilities to avoid recalculating on every render
+  const chartData1 = useMemo(
+    () => [
+      { id: "Machine Learning", value: 35 },
+      { id: "Data Analysis", value: 25 },
+      { id: "Deep Learning", value: 20 },
+      { id: "Reinforcement Learning", value: 10 },
+      { id: "Image Processing", value: 5 },
+      { id: "Natural Language Processing", value: 5 },
+    ],
+    []
+  );
 
-  const chartData2 = [
-    { id: "English", value: 40 },
-    { id: "Germany", value: 30 },
-    { id: "French", value: 10 },
-  ];
+  const chartData2 = useMemo(
+    () => [
+      { id: "English", value: 40 },
+      { id: "Germany", value: 30 },
+      { id: "French", value: 10 },
+    ],
+    []
+  );
 
-  const capabilities = [
-    {
-      title: "Machine Learning",
-      description:
-        "Machine learning is a branch of artificial intelligence that focuses on developing algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data. ",
-      URL: "/images/machineLearning.jpg",
-    },
-    {
-      title: "Data Analysis",
-      description:
-        "Data analysis is the process of inspecting, cleansing, transforming, and modeling data to uncover useful information, conclusions, and insights.",
-      URL: "/images/dataAnalysis.jpg",
-    },
-    {
-      title: "Deep Learning",
-      description:
-        "Deep learning is a subset of machine learning that uses neural networks with many layers to learn complex patterns in large amounts of data.",
-      URL: "/images/deepLearning.jpg",
-    },
-    {
-      title: "Reinforcement Learning",
-      description:
-        "Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving rewards or punishments.",
-      URL: "/images/reinforecmentLearning.png",
-    },
-    {
-      title: "Image Processing",
-      description:
-        "Image processing is the analysis and manipulation of digital images to improve their quality or extract useful information. ",
-      URL: "/images/imageProcessing.jpg",
-    },
-    {
-      title: "Natural Language Processing",
-      description:
-        "Natural language processing is a field of artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language.",
-      URL: "/images/NLP.webp",
-    },
-  ];
-  const languages = [
-    {
-      title: "Germany",
-      description:
-        "I am proficient in Germany, both in speaking and writing. My knowledge of the German language has been acquired through formal education and practical experience.",
-      URL: "/images/machineLearning.jpg",
-    },
-    {
-      title: "English",
-      description:
-        "I have a strong command of the English language, both in spoken and written forms. I have honed my English skills through formal education, professional experience, and everyday communication.",
-      URL: "/images/machineLearning.jpg",
-    },
-    {
-      title: "Persian",
-      description:
-        "Persian is my native language, and I am fluent in both spoken and written forms. Growing up in a Persian-speaking environment has allowed me to develop a deep understanding of the language and its nuances.",
-      URL: "/images/machineLearning.jpg",
-    },
-  ];
+  const capabilities = useMemo(
+    () => [
+      {
+        title: "Machine Learning",
+        description:
+          "Machine learning is a branch of artificial intelligence that focuses on developing algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data. ",
+        URL: "/images/machineLearning.jpg",
+      },
+      {
+        title: "Data Analysis",
+        description:
+          "Data analysis is the process of inspecting, cleansing, transforming, and modeling data to uncover useful information, conclusions, and insights.",
+        URL: "/images/dataAnalysis.jpg",
+      },
+      {
+        title: "Deep Learning",
+        description:
+          "Deep learning is a subset of machine learning that uses neural networks with many layers to learn complex patterns in large amounts of data.",
+        URL: "/images/deepLearning.jpg",
+      },
+      {
+        title: "Reinforcement Learning",
+        description:
+          "Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving rewards or punishments.",
+        URL: "/images/reinforecmentLearning.png",
+      },
+      {
+        title: "Image Processing",
+        description:
+          "Image processing is the analysis and manipulation of digital images to improve their quality or extract useful information. ",
+        URL: "/images/imageProcessing.jpg",
+      },
+      {
+        title: "Natural Language Processing",
+        description:
+          "Natural language processing is a field of artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language.",
+        URL: "/images/NLP.webp",
+      },
+    ],
+    []
+  );
+
+  const languages = useMemo(
+    () => [
+      {
+        title: "Germany",
+        description:
+          "I am proficient in Germany, both in speaking and writing. My knowledge of the German language has been acquired through formal education and practical experience.",
+        URL: "/images/machineLearning.jpg",
+      },
+      {
+        title: "English",
+        description:
+          "I have a strong command of the English language, both in spoken and written forms. I have honed my English skills through formal education, professional experience, and everyday communication.",
+        URL: "/images/machineLearning.jpg",
+      },
+      {
+        title: "Persian",
+        description:
+          "Persian is my native language, and I am fluent in both spoken and written forms. Growing up in a Persian-speaking environment has allowed me to develop a deep understanding of the language and its nuances.",
+        URL: "/images/machineLearning.jpg",
+      },
+    ],
+    []
+  );
 
   return (
     <>
       {/* Floating Navigation Bar */}
-      <FloatingNavbar locale="en"/>
+      <FloatingNavbar locale="en" />
 
       {/* Main Wrapper */}
       <div className="relative w-full h-full">
@@ -189,12 +203,14 @@ export default function Page() {
               </div>
             </section>
           </GridBackground>
+
           {/* About me */}
           <GridBackground>
             <div className="panel">
-            <StickyScrollReveal lang="en" />
+              <StickyScrollReveal lang="en" />
             </div>
           </GridBackground>
+
           {/* Secondary Section */}
           <BackgroundBoxes>
             <div className="container mx-auto">
@@ -212,10 +228,10 @@ export default function Page() {
                 {/* Paragraph Section */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center text-center max-w-2xl">
                   <p className="text-navy font-semibold text-base xl:text-xl">
-                    This is where data's true value is realized. The isights
+                    This is where data's true value is realized. The insights
                     derived from thoughtful analysis are more than just
                     knowledge; they are powerful tools for driving growth,
-                    optimizing procrsses, and uncovering new opportunities.
+                    optimizing processes, and uncovering new opportunities.
                   </p>
                   <p className="text-navy font-semibold text-base xl:text-xl">
                     With the right models and a strategic approach, these
@@ -238,9 +254,11 @@ export default function Page() {
           </BackgroundBoxes>
         </main>
         <footer className="panel">
-          <Footer lang="en"/>
+          <Footer lang="en" />
         </footer>
       </div>
     </>
   );
-}
+};
+
+export default Page;
