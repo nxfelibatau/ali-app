@@ -12,5 +12,5 @@ export default function ClientWrapper() {
     document.documentElement.lang = locale;
   }, [locale]);
 
-  return null; // این کامپوننت فقط برای تنظیمات است و چیزی نمایش نمی‌دهد
+  return null;
 }
