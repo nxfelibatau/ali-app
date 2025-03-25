@@ -74,7 +74,7 @@ const MyChart = ({ data }) => {
     node
       .append("text")
       .style("fill", "white")
-      .style("font-size", "30px")
+      .style("font-size", "34px")
       .style("pointer-events", "none")
       .selectAll("tspan")
       .data((d) => d.data.id.split(" "))
@@ -86,7 +86,7 @@ const MyChart = ({ data }) => {
     node
       .append("text")
       .style("fill", "white")
-      .style("font-size", "30px")
+      .style("font-size", "35px")
       .style("font-weight", "bold")
       .attr("dy", "2em")
       .text((d) => `${((d.data.value / total) * 100).toFixed(1)}%`);
@@ -99,7 +99,7 @@ const ProjectGrid = ({ dir, heading, data, data2 }) => {
   return (
     <div
       dir={dir}
-      className="flex flex-col md:flex-row min-h-screen text-white my-24"
+      className="flex flex-col md:flex-row min-h-screen text-white my-72 md:my-24"
     >
       <div className="flex flex-col justify-center items-start md:w-1/2 w-full p-8 md:sticky top-0 md:h-screen">
         <div className="w-full text-center">
