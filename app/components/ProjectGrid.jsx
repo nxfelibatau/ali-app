@@ -99,7 +99,7 @@ const ProjectGrid = ({ dir, heading, data, data2 }) => {
   return (
     <div
       dir={dir}
-      className="flex flex-col md:flex-row min-h-screen text-white mb-24"
+      className="flex flex-col md:flex-row min-h-screen text-white my-24"
     >
       <div className="flex flex-col justify-center items-start md:w-1/2 w-full p-8 md:sticky top-0 md:h-screen">
         <div className="w-full text-center">

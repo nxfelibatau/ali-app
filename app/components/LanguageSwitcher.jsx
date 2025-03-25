@@ -18,7 +18,7 @@ const LanguageSwitcher = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="px-4 py-2 rounded-md border text-white border-white hover:bg-gray-950 transition"
+      className="md:px-4 md:py-2 px-2 py-0 text-sm md:text-base rounded-md border text-white border-white hover:bg-gray-950 transition"
     >
       {newLang.toUpperCase()}
     </button>

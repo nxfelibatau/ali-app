@@ -18,12 +18,12 @@ export default function Header({ logoAlt = "Logo", navLinks = [] }) {
   return (
     <div className="container mx-auto">
       <nav className="w-full z-20 top-0 start-0 border-b border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
-          <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto  md:p-1">
+          <Link href="/" className="flex items-cente">
             <Image src="/images/AG.png" className="h-8 object-contain" alt={logoAlt} width={40} height={40} />
           </Link>
           <div className="items-center justify-between flex w-auto">
-            <ul className="flex p-4 font-medium rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse flex-row">
+            <ul className="flex md:p-4 p-2 font-medium rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse flex-row">
               {navLinks.length > 0 ? (
                 navLinks.map((link) => (
                   <li key={link.href}>
@@ -35,7 +35,7 @@ export default function Header({ logoAlt = "Logo", navLinks = [] }) {
                     </Link>
                     <Link
                       href={link.href}
-                      className="flex md:hidden py-2 text-sm px-3 md:text-base hover:text-gray-400 text-white rounded md:bg-transparent md:p-0"
+                      className="flex md:hidden py-2 text-sm px-2 md:text-base hover:text-gray-400 text-white rounded md:bg-transparent md:p-0"
                     >
                       {link.icon}
                     </Link>
@@ -46,7 +46,7 @@ export default function Header({ logoAlt = "Logo", navLinks = [] }) {
               )}
             </ul>
           </div>
-          <div className="flex space-x-3 rtl:space-x-reverse">
+          <div className="flex space-x-1 rtl:space-x-reverse">
             <LanguageSwitcher />
             <AnimatedModal buttonText={modalTexts[locale]} lang={locale} />
           </div>
