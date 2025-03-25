@@ -74,7 +74,7 @@ const MyChart = ({ data }) => {
     node
       .append("text")
       .style("fill", "white")
-      .style("font-size", "25px")
+      .style("font-size", "30px")
       .style("pointer-events", "none")
       .selectAll("tspan")
       .data((d) => d.data.id.split(" "))
@@ -86,7 +86,7 @@ const MyChart = ({ data }) => {
     node
       .append("text")
       .style("fill", "white")
-      .style("font-size", "25px")
+      .style("font-size", "30px")
       .style("font-weight", "bold")
       .attr("dy", "2em")
       .text((d) => `${((d.data.value / total) * 100).toFixed(1)}%`);

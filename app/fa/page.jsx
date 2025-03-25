@@ -39,12 +39,12 @@ const Page = () => {
 
   // Memoizing data
   const chartData1 = useMemo(() => [
-    { id: "یادگیری ماشین", value: 35 },
-    { id: "تحلیل داده‌ها", value: 25 },
-    { id: "یادگیری عمیق", value: 20 },
-    { id: "یادگیری تقویتی", value: 10 },
-    { id: "پردازش تصویر", value: 5 },
-    { id: "پردازش زبان طبیعی", value: 5 },
+    { id: "Machine Learning", value: 35 },
+      { id: "Data Analysis", value: 25 },
+      { id: "Deep Learning", value: 20 },
+      { id: "Reinforcement Learning", value: 10 },
+      { id: "Image Processing", value: 5 },
+      { id: "Natural Language Processing", value: 5 },
   ], []);
 
   const chartData2 = useMemo(() => [
@@ -55,37 +55,37 @@ const Page = () => {
 
   const capabilities = useMemo(() => [
     {
-      title: "یادگیری ماشین",
+      title: "Machine Learning",
       description:
         "یادگیری ماشین شاخه‌ای از هوش مصنوعی است که بر توسعه الگوریتم‌ها و مدل‌های آماری تمرکز دارد که به کامپیوترها این امکان را می‌دهد که از داده‌ها یاد بگیرند و پیش‌بینی‌ها یا تصمیمات بر اساس داده‌ها بگیرند.",
       URL: "/images/machineLearning.jpg",
     },
     {
-      title: "تحلیل داده‌ها",
+      title: "Data Analysis",
       description:
         "تحلیل داده‌ها فرآیند بازرسی، تمیز کردن، تبدیل و مدل‌سازی داده‌ها است تا اطلاعات مفید، نتیجه‌گیری‌ها و بینش‌ها را کشف کنیم.",
       URL: "/images/dataAnalysis.jpg",
     },
     {
-      title: "یادگیری عمیق",
+      title: "Deep Learning",
       description:
         "یادگیری عمیق زیرمجموعه‌ای از یادگیری ماشین است که از شبکه‌های عصبی با لایه‌های متعدد برای یادگیری الگوهای پیچیده در مقادیر زیاد داده استفاده می‌کند.",
       URL: "/images/deepLearning.jpg",
     },
     {
-      title: "یادگیری تقویتی",
+      title: "Reinforcement Learning",
       description:
         "یادگیری تقویتی نوعی از یادگیری ماشین است که در آن یک عامل از طریق تعامل با محیط و دریافت پاداش یا تنبیه، یاد می‌گیرد که چه تصمیماتی بگیرد.",
       URL: "/images/reinforecmentLearning.png",
     },
     {
-      title: "پردازش تصویر",
+      title: "Image Processing",
       description:
         "پردازش تصویر تجزیه و تحلیل و دستکاری تصاویر دیجیتال به منظور بهبود کیفیت آنها یا استخراج اطلاعات مفید است.",
       URL: "/images/imageProcessing.jpg",
     },
     {
-      title: "پردازش زبان طبیعی",
+      title: "Natural Language Processing",
       description:
         "پردازش زبان طبیعی شاخه‌ای از هوش مصنوعی است که به کامپیوترها این امکان را می‌دهد تا زبان انسان را درک، تفسیر و تولید کنند.",
       URL: "/images/NLP.webp",
